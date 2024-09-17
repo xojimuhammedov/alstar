@@ -1,3 +1,7 @@
+import Design from "@/components/Design";
+import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
+import News from "@/components/News";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,7 +14,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <main></main>
+        <nav>
+          <Navbar />
+        </nav>
+        <header>
+          <Header />
+        </header>
+        <main>
+          <Design />
+          <News />
+        </main>
         <footer></footer>
       </>
     </>
