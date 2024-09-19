@@ -1,11 +1,12 @@
-import Design from '@/components/Design';
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
-import News from '@/components/News';
 import Head from 'next/head';
+import React from 'react';
+import Header from './_components/Header';
+import Main from './_components/Main';
+import Partnership from './_components/Partnership';
 
-export default function Home() {
+function AboutAlstar() {
   return (
     <>
       <Head>
@@ -22,9 +23,11 @@ export default function Home() {
           <Header />
         </header>
         <main>
-          <Design />
-          <News />
+          <Main />
         </main>
+        <section>
+          <Partnership />
+        </section>
         <footer>
           <Footer />
         </footer>
@@ -32,3 +35,5 @@ export default function Home() {
     </>
   );
 }
+
+export default AboutAlstar;

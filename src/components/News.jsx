@@ -63,7 +63,7 @@ const css = {
     height: "200px",
     gap: "16px",
     borderRadius: "12px",
-    margin:"24px 0"
+    margin: "24px 0",
   },
   image: {
     width: "100%",
@@ -93,7 +93,7 @@ const css = {
     fontWeight: "500",
     fontSize: "14px",
     transition: "0.3s all",
-    borderRadius:"12px",
+    borderRadius: "12px",
 
     _hover: {
       background: "#C22329",

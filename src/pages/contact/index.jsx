@@ -1,11 +1,11 @@
-import Design from '@/components/Design';
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
-import News from '@/components/News';
 import Head from 'next/head';
+import React from 'react';
+import Header from './_components/Header';
+import Form from './_components/Form';
 
-export default function Home() {
+function Contact() {
   return (
     <>
       <Head>
@@ -14,21 +14,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <>
-        <nav>
-          <Navbar />
-        </nav>
-        <header>
-          <Header />
-        </header>
-        <main>
-          <Design />
-          <News />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </>
+      <nav>
+        <Navbar />
+      </nav>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Form />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
+
+export default Contact;

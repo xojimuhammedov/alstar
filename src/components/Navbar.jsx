@@ -7,13 +7,13 @@ function Navbar() {
     <Box {...css.nav}>
       <Box className="container">
         <Flex {...css.top}>
-          <Link {...css.links} href="/">
+          <Link {...css.links} href="/about-alstar">
             About ALPOLIC™
           </Link>
           <Link {...css.links} href="/">
             Career
           </Link>
-          <Link {...css.links} href="/">
+          <Link {...css.links} href="/contact">
             Contact
           </Link>
         </Flex>
