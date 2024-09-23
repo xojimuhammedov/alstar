@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Navbar from '@/components/Navbar';
 import News from '@/components/News';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <footer>
           <Footer />
         </footer>
+        <Link className='position-link' href={'/alstar-product'}>ALSTAR™ A1</Link>
       </>
     </>
   );

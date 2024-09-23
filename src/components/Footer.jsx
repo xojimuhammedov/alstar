@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Input, Link, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
 
-import AlstarIcon from '@/assets/white-icon.png';
+import AlstarIcon from '@/assets/white-logo.png';
 import Instagram from '@/assets/svg/Instagram';
 import Facebook from '@/assets/svg/Facebook';
 import Telegram from '@/assets/svg/Telegram';

@@ -5,7 +5,7 @@ function Header() {
   return (
     <Box>
       <Box className="container">
-          <h1>Welcome to the World of Art</h1>
+        <h1>Welcome to the World of Art</h1>
       </Box>
     </Box>
   );
