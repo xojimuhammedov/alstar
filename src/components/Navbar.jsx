@@ -28,7 +28,7 @@ function Navbar() {
             <Link {...css.link} href="/">
               Products
             </Link>
-            <Link {...css.link} href="/">
+            <Link {...css.link} href="/inspirations">
               Inspirations
             </Link>
             <Link {...css.link} href="/colour">
