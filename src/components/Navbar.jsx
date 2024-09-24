@@ -1,45 +1,48 @@
-import { Box, Flex, Image, Link } from '@chakra-ui/react';
+import { Box, Flex, Image, Link as Alink } from '@chakra-ui/react';
 import React from 'react';
 import AlstarIcon from '@/assets/logo.png';
+import Link from 'next/link';
 
 function Navbar() {
   return (
     <Box {...css.nav}>
       <Box className="container">
         <Flex {...css.top}>
-          <Link {...css.links} href="/about-alstar">
-            About ALSTAR™
+          <Link href="/about-alstar">
+            <Alink {...css.links}>
+              About ALSTAR™
+            </Alink>
           </Link>
-          <Link {...css.links} href="/career">
+          <Alink {...css.links} href="/career">
             Career
-          </Link>
-          <Link {...css.links} href="/contact">
+          </Alink>
+          <Alink {...css.links} href="/contact">
             Contact
-          </Link>
+          </Alink>
         </Flex>
         <Flex {...css.list}>
           <Link href="/">
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
           </Link>
           <Flex {...css.item}>
-            <Link {...css.link} href="/product">
+            <Alink {...css.link} href="/product">
               Why Alstar
-            </Link>
-            <Link {...css.link} href="/">
+            </Alink>
+            <Alink {...css.link} href="/">
               Products
-            </Link>
-            <Link {...css.link} href="/inspirations">
+            </Alink>
+            <Alink {...css.link} href="/inspirations">
               Inspirations
-            </Link>
-            <Link {...css.link} href="/colour">
+            </Alink>
+            <Alink {...css.link} href="/colour">
               Colours & Samples
-            </Link>
-            <Link {...css.link} href="/">
+            </Alink>
+            <Alink {...css.link} href="/">
               Service & Downloads
-            </Link>
-            <Link {...css.link} href="/">
+            </Alink>
+            <Alink {...css.link} href="/">
               News
-            </Link>
+            </Alink>
           </Flex>
         </Flex>
       </Box>
@@ -70,10 +73,10 @@ const css = {
     lineHeight: '24px',
     textTransform: 'uppercase',
     fontWeight: '500',
-    transition:"0.3s",
+    transition: '0.3s',
 
-    _hover:{
-      color:"#EE1818"
+    _hover: {
+      color: '#EE1818'
     }
   },
   top: {
@@ -87,10 +90,10 @@ const css = {
     lineHeight: '20px',
     textTransform: 'uppercase',
     fontWeight: '500',
-    transition:"0.3s",
+    transition: '0.3s',
 
-    _hover:{
-      color:"#EE1818"
+    _hover: {
+      color: '#EE1818'
     }
   }
 };

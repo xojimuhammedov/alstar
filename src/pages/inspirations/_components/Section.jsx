@@ -60,7 +60,7 @@ const css = {
     lineHeight: '24px',
     fontWeight: '200',
     color: '#111',
-    marginBottom: '12px'
+    marginBottom: '16px'
   },
   link: {
     backgroundColor: '#111',
