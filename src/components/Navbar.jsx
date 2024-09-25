@@ -9,9 +9,7 @@ function Navbar() {
       <Box className="container">
         <Flex {...css.top}>
           <Link href="/about-alstar">
-            <Alink {...css.links}>
-              About ALSTAR™
-            </Alink>
+            <Alink {...css.links}>About ALSTAR™</Alink>
           </Link>
           <Alink {...css.links} href="/career">
             Career
@@ -37,9 +35,11 @@ function Navbar() {
             <Alink {...css.link} href="/colour">
               Colours & Samples
             </Alink>
-            <Alink {...css.link} href="/">
-              Service & Downloads
-            </Alink>
+            <Link href="/services">
+              <Alink {...css.link}>
+                Service & Downloads
+              </Alink>
+            </Link>
             <Alink {...css.link} href="/">
               News
             </Alink>
