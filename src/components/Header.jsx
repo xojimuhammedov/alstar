@@ -9,16 +9,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 function Header() {
   return (
-    <Box position={'relative'}>
+    <Box className='header' position={'relative'}>
       <Swiper
         pagination={{
           dynamicBullets: true
         }}
-        modules={[Pagination]}
+        navigation={{
+          nextEl: '.button-next-slide',
+          prevEl: '.button-prev-slide'
+        }}
+        loop
+        modules={[Pagination, Navigation]}
         className="mySwiper">
         <SwiperSlide>
           <Box width={'100%'}>
@@ -35,6 +42,27 @@ function Header() {
             </Link>
           </Box>
         </SwiperSlide>
+        <SwiperSlide>
+          <Box width={'100%'}>
+            <Image {...css.image} src={CarouselOne.src} alt="CarouselOne" />
+          </Box>
+          <Box {...css.box}>
+            <Heading {...css.title}>PERFORMANCE POWER FOR YOUR FAÇADE</Heading>
+            <Text {...css.text}>
+              More quality, more stability, more choice, lower costs: find out why ALPOLIC is the
+              best choice for you and your project!
+            </Text>
+            <Link {...css.link} href="/">
+              Learn More
+            </Link>
+          </Box>
+        </SwiperSlide>
+        <div className="button-next-slide swiper-right next-button">
+          <ChevronRightIcon fontSize={'34px'} />
+        </div>
+        <div className="button-prev-slide swiper-left next-button">
+          <ChevronLeftIcon fontSize={'34px'} />
+        </div>
       </Swiper>
     </Box>
   );

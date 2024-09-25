@@ -61,3 +61,63 @@ body {
   background-size: 100%;
   height: 210px;
 }
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ee1818 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.next-button {
+  background-color: #111;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-right {
+  right: 0;
+  top: 100px;
+}
+
+.swiper-right svg path {
+  fill: #fff;
+}
+
+.swiper-left {
+  left: 0;
+  top: 100px;
+}
+
+.swiper-left svg path {
+  fill: #fff;
+}
+
+.next-button {
+  transition: 0.3s;
+}
+.next-button:hover {
+  background-color: #fff;
+}
+.next-button:hover svg path {
+  fill: #ee1818;
+}
+
+.company .next-button {
+  top: 150px;
+}
+
+.header .next-button {
+  top: 250px;
+}
