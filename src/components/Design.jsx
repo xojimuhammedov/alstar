@@ -10,20 +10,16 @@ import {
 import React from "react";
 
 import DesignImage from "@/assets/design.webp";
+
+import { useTranslation } from 'react-i18next';
 function Design() {
+  const {t} = useTranslation()
   return (
     <Box p={"36px 0"}>
       <Box className="container-mix">
-        <Heading {...css.title}>Inspiring in design and colour</Heading>
+        <Heading {...css.title}>{t("color.name")}</Heading>
         <Text {...css.text}>
-          With our almost limitless selection of colours and decors, we offer
-          you the opportunity to give your façade an unmistakable appearance.
-          The range extends from natural metallic colours and real metals to
-          dazzling prismatic colours and elegant solid colours to extraordinary
-          design decors. The inexhaustible variety guarantees you creative
-          freedom in the realisation of your building project. Let yourself be
-          inspired and simply request your desired colour samples from us,
-          because nothing can replace the effect of the original.
+        {t("color.text")}
         </Text>
         <SimpleGrid gap={"24px"} columns={4}>
           <Box>

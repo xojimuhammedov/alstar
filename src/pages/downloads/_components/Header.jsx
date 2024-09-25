@@ -5,7 +5,7 @@ import BannerOne from '@/assets/service-banner.webp';
 function Header() {
   return (
     <Box position={'relative'}>
-      <Image {...css.image} src={'https://www.alpolic.eu/uploads/media/fullsize-1920x/01/41-header_service_schmal_3840x537_neu.webp?v=3-0'} alt="BannerOne" />
+      <Image {...css.image} src={'https://www.alpolic.eu/uploads/media/fullsize-1920x/09/39-header_download_3840x537_neu.webp?v=3-0'} alt="BannerOne" />
     </Box>
   );
 }

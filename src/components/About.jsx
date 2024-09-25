@@ -1,24 +1,14 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+  const { t } = useTranslation();
   return (
-    <Box p={"36px 0"}>
+    <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>
-          ALSTAR – A strong brand for strong Partners and large Projects
-        </Heading>
-        <Text {...css.text}>
-          ALSTAR is a brand of Mitsubishi Chemical. As a global market leader with over 50 years of
-          experience in the development and manufacture of aluminium composite panels for
-          sophisticated façade cladding, we stand for the safety of innovative, high-quality
-          products and perfect service. BE.SAFE. is the claim that ALSTAR proves not only as a
-          product, but holistically as a corporate philosophy. This is backed by tangible arguments
-          for more inspiration, quality and safety for rear-ventilated building façades – from fire
-          protection to sustainability. Architects and fabricators worldwide rely on our quality
-          products for the implementation of unique architectural projects - both in existing and
-          new buildings.
-        </Text>
+        <Heading {...css.title}>{t('company.name')}</Heading>
+        <Text {...css.text}>{t('company.text')}</Text>
       </Box>
     </Box>
   );

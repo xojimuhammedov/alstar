@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Link as Alink } from '@chakra-ui/react';
+import { Box, Flex, Image, Link as Alink, Text } from '@chakra-ui/react';
 import React from 'react';
 import AlstarIcon from '@/assets/logo.png';
 import Link from 'next/link';
@@ -9,36 +9,36 @@ function Navbar() {
       <Box className="container">
         <Flex {...css.top}>
           <Link href="/about-alstar">
-            <Alink {...css.links}>About ALSTAR™</Alink>
+            <Text {...css.links}>About ALSTAR™</Text>
           </Link>
-          <Alink {...css.links} href="/career">
-            Career
-          </Alink>
-          <Alink {...css.links} href="/contact">
-            Contact
-          </Alink>
+          <Link href="/career">
+            <Text {...css.links}>Career</Text>
+          </Link>
+          <Link href="/contact">
+            <Text {...css.links}>Contact</Text>
+          </Link>
         </Flex>
         <Flex {...css.list}>
           <Link href="/">
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
           </Link>
           <Flex {...css.item}>
-            <Alink {...css.link} href="/product">
-              Why Alstar
-            </Alink>
+            <Link href="/product">
+              <Text {...css.link}>
+                Why Alstar
+              </Text>
+            </Link>
             <Alink {...css.link} href="/">
               Products
             </Alink>
-            <Alink {...css.link} href="/inspirations">
-              Inspirations
-            </Alink>
-            <Alink {...css.link} href="/colour">
-              Colours & Samples
-            </Alink>
-            <Link href="/services">
-              <Alink {...css.link}>
-                Service & Downloads
-              </Alink>
+            <Link href="/inspirations">
+              <Text {...css.link}>Inspirations</Text>
+            </Link>
+            <Link href="/colour">
+              <Text {...css.link}>Colours & Samples</Text>
+            </Link>
+            <Link href="/service-download">
+              <Text {...css.link}>Service & Downloads</Text>
             </Link>
             <Alink {...css.link} href="/">
               News

@@ -7,9 +7,9 @@ function Main() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>{t("service.name")}</Heading>
+        <Heading {...css.title}>{t("download.name")}</Heading>
         <Text {...css.text}>
-        {t("service.text")}
+        {t("download.text")}
         </Text>
       </Box>
     </Box>
