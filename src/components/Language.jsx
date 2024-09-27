@@ -6,29 +6,35 @@ import EnglishImage from '@/assets/english.png';
 import Image from 'next/image';
 import { Box, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 
-function Language() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const languageData = [
+  {
+    id: 1,
+    image: UzbekImage,
+    value: 'uz'
+  },
+  {
+    id: 2,
+    image: RussianImage,
+    value: 'ru'
+  },
+  {
+    id: 3,
+    image: EnglishImage,
+    value: 'en'
+  }
+];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+function Language() {
   const { i18n } = useTranslation();
-  const initialLanguage =
-    typeof window !== 'undefined' ? localStorage.getItem('language') || UzbekImage : 'ru';
-  const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
 
   const onChangeLanguage = (value) => {
     i18n.changeLanguage(value);
-    setSelectedLanguage(value);
-    toggleMenu();
   };
 
   const languageImage =
-    selectedLanguage === 'uz'
-      ? UzbekImage
-      : selectedLanguage === 'ru'
-        ? RussianImage
-        : EnglishImage;
+    i18n?.language === 'uz' ? UzbekImage : i18n?.language === 'ru' ? RussianImage : EnglishImage;
+
+  const data = languageData?.filter((item) => item?.value != i18n.language);
 
   return (
     <>
@@ -37,21 +43,13 @@ function Language() {
           <Image className={'language-image'} src={languageImage} alt="Language" />
         </MenuButton>
         <MenuList ml={'-7px'} zIndex="999" {...css.menuItem}>
-          <MenuItem>
-            <Box onClick={() => onChangeLanguage('uz')}>
-              <Image className={'language-image'} src={UzbekImage} alt="Uzbek" />
-            </Box>
-          </MenuItem>
-          <MenuItem>
-            <Box onClick={() => onChangeLanguage('ru')}>
-              <Image className={'language-image'} src={RussianImage} alt="Russian" />
-            </Box>
-          </MenuItem>
-          <MenuItem>
-            <Box onClick={() => onChangeLanguage('en')}>
-              <Image className={'language-image'} src={EnglishImage} alt="English" />
-            </Box>
-          </MenuItem>
+          {data?.map((item, index) => (
+            <MenuItem key={index}>
+              <Box onClick={() => onChangeLanguage(item.value)}>
+                <Image className={'language-image'} src={item.image} alt="English" />
+              </Box>
+            </MenuItem>
+          ))}
         </MenuList>
       </Menu>
     </>
@@ -62,6 +60,6 @@ export default Language;
 
 const css = {
   menuItem: {
-    minWidth: '35px',
+    minWidth: '35px'
   }
 };

@@ -7,7 +7,12 @@ function About() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>{t('company.name')}</Heading>
+        <Heading
+          {...css.title}
+          dangerouslySetInnerHTML={{
+            __html: t('company.name')
+          }}
+        />
         <Text {...css.text}>{t('company.text')}</Text>
       </Box>
     </Box>

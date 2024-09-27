@@ -10,11 +10,12 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 import CarouselOne from '@/assets/slider1.jpg';
+import CarouselTwo from '@/assets/carousel-two.webp';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 function Company() {
   return (
-    <Box className='company' p={'50px 0'} bg={'#111'}>
+    <Box className="company" p={'50px 0'} bg={'#111'}>
       <Swiper
         pagination={{
           dynamicBullets: true
@@ -44,13 +45,15 @@ function Company() {
           <Box className="container">
             <Flex pb={'36px'} justifyContent={'space-between'}>
               <Box pt={'48px'}>
-                <Heading {...css.title}>Unlimited versatile façade design</Heading>
-                <Text {...css.text}>ALSTAR:First choice for demanding projects worldwide.</Text>
+                <Heading {...css.title}>From idea to form</Heading>
+                <Text {...css.text}>
+                  ALSTAR: Inexhaustible design possibilities and simple processing.
+                </Text>
                 <Link href="/" {...css.link}>
                   Learn More
                 </Link>
               </Box>
-              <Image {...css.image} src={CarouselOne.src} alt="Company" />
+              <Image {...css.image} src={CarouselTwo.src} alt="Company" />
             </Flex>
           </Box>
         </SwiperSlide>
@@ -88,16 +91,16 @@ const css = {
     objectFit: 'cover'
   },
   title: {
-    fontSize: '30px',
-    lineHeight: '35px',
+    fontSize: '35px',
+    lineHeight: '40px',
     fontWeight: '200',
     marginBottom: '12px',
     color: '#fff'
   },
   text: {
-    fontSize: '14px',
+    fontSize: '18px',
     color: '#fff',
-    lineHeight: '22px',
+    lineHeight: '26px',
     marginBottom: '24px'
   }
 };

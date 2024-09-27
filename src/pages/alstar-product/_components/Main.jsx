@@ -9,9 +9,9 @@ function Main() {
           For building projects with the highest fire protection requirements: ALSTAR A1
         </Heading>
         <Text {...css.text}>
-          ALPOLICTM NC/A1 is a composite panel consisting of two 0.5 mm thick aluminium cover sheets
+          ALSTAR NC/A1 is a composite panel consisting of two 0.5 mm thick aluminium cover sheets
           and a non-combustible mineral core (3 mm). The core consists of almost 100%
-          non-combustible ingredients and has a calorific value of less than 1 MJ/kg. ALPOLICTM
+          non-combustible ingredients and has a calorific value of less than 1 MJ/kg. ALSTAR
           NC/A1 is currently the only composite panel in the world that is classified for the
           highest fire protection class A1 according to DIN EN 13501-1. This means: non-combustible
           and also no smoke development in case of fire. A sustainable alternative to façade
@@ -24,7 +24,7 @@ function Main() {
           corrosion and acids and are efficiently resistant to chalking.
         </Text>
         <Text {...css.text}>
-          ALPOLICTM NC/A1 composite panels are particularly recommended for building projects with
+          ALSTAR NC/A1 composite panels are particularly recommended for building projects with
           the highest fire protection requirements or where the use of non-combustible facade
           materials is prescribed - for example high-rise buildings or special buildings such as
           schools, hospitals, retirement homes etc.

@@ -15,7 +15,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 function Header() {
   return (
-    <Box className='header' position={'relative'}>
+    <Box className="header" position={'relative'}>
       <Swiper
         pagination={{
           dynamicBullets: true
@@ -44,13 +44,60 @@ function Header() {
         </SwiperSlide>
         <SwiperSlide>
           <Box width={'100%'}>
-            <Image {...css.image} src={CarouselOne.src} alt="CarouselOne" />
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-1920x/01/981-ALP_Perf_Power_Produkt.webp?v=3-0'
+              }
+              alt="CarouselOne"
+            />
           </Box>
           <Box {...css.box}>
-            <Heading {...css.title}>PERFORMANCE POWER FOR YOUR FAÇADE</Heading>
+            <Heading {...css.title}>PRODUCT PERFORMANCE</Heading>
             <Text {...css.text}>
-              More quality, more stability, more choice, lower costs: find out why ALPOLIC is the
-              best choice for you and your project!
+              The special composition of the core and our unique fusion process make ALSTAR™
+              composite panels so superior.
+            </Text>
+            <Link {...css.link} href="/">
+              Learn More
+            </Link>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box width={'100%'}>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-1920x/03/983-ALP_Perf_Power_Verarbeitung.webp?v=3-0'
+              }
+              alt="CarouselOne"
+            />
+          </Box>
+          <Box {...css.box}>
+            <Heading {...css.title}>PROCESSING PERFORMANCE</Heading>
+            <Text {...css.text}>
+              The unique material composition of ALSTAR guarantees precise edging, routing and
+              cutting - with clean cutting edges.
+            </Text>
+            <Link {...css.link} href="/">
+              Learn More
+            </Link>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box width={'100%'}>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-1920x/09/979-ALP_Perf_Power_Installation.webp?v=3-0'
+              }
+              alt="CarouselOne"
+            />
+          </Box>
+          <Box {...css.box}>
+            <Heading {...css.title}>INSTALLATION PERFORMANCE</Heading>
+            <Text {...css.text}>
+              With ALSTAR  you save up to 50 % on the substructure and installation time without compromising the stability of the façade!
             </Text>
             <Link {...css.link} href="/">
               Learn More
