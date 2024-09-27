@@ -2,6 +2,7 @@ import { Box, Flex, Image, Text, Menu, MenuItem, MenuButton, MenuList } from '@c
 import React from 'react';
 import AlstarIcon from '@/assets/logo.png';
 import Link from 'next/link';
+import Language from './Language';
 
 function Navbar() {
   return (
@@ -17,6 +18,7 @@ function Navbar() {
           <Link href="/contact">
             <Text {...css.links}>Contact</Text>
           </Link>
+          <Language />
         </Flex>
         <Flex {...css.list}>
           <Link href="/">
@@ -91,7 +93,8 @@ const css = {
   top: {
     justifyContent: 'flex-end',
     gap: '12px',
-    padding: '16px 0'
+    padding: '16px 0',
+    alignItems:"center"
   },
   links: {
     color: '#5F5E5E',

@@ -53,7 +53,7 @@ const css = {
   title: {
     fontSize: "34px",
     lineHeight: "39px",
-    fontWeight: "200",
+    fontWeight: "400",
     color: "#111",
     textAlign: "center",
     marginBottom: "24px",
@@ -74,7 +74,7 @@ const css = {
     borderRadius: "12px 0 0 12px",
   },
   name: {
-    fontWeight: "200",
+    fontWeight: "400",
     color: "#111",
     fontSize: "25px",
     lineHeight: "30px",
