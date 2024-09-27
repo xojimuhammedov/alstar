@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Link as Alink, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Menu, MenuItem, MenuButton, MenuList } from '@chakra-ui/react';
 import React from 'react';
 import AlstarIcon from '@/assets/logo.png';
 import Link from 'next/link';
@@ -24,13 +24,22 @@ function Navbar() {
           </Link>
           <Flex {...css.item}>
             <Link href="/product">
-              <Text {...css.link}>
-                Why Alstar
-              </Text>
+              <Text {...css.link}>Why Alstar</Text>
             </Link>
-            <Alink {...css.link} href="/">
-              Products
-            </Alink>
+            <Menu isLazy>
+              <MenuButton {...css.link}>Products</MenuButton>
+              <MenuList {...css.menuItem} zIndex={'999'}>
+                <MenuItem>
+                  <Link href={'/alstar-product/1'}>ALSTAR™ NC/A1</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link href={'/alstar-product/2'}>ALSTAR™ A2</Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link href={'/alstar-product/3'}>ALSTAR™\FR</Link>
+                </MenuItem>
+              </MenuList>
+            </Menu>
             <Link href="/inspirations">
               <Text {...css.link}>Inspirations</Text>
             </Link>
@@ -40,9 +49,9 @@ function Navbar() {
             <Link href="/service-download">
               <Text {...css.link}>Service & Downloads</Text>
             </Link>
-            <Alink {...css.link} href="/">
-              News
-            </Alink>
+            <Link href="/">
+              <Text {...css.link}>News</Text>
+            </Link>
           </Flex>
         </Flex>
       </Box>
@@ -72,7 +81,7 @@ const css = {
     fontSize: '18px',
     lineHeight: '24px',
     textTransform: 'uppercase',
-    fontWeight: '500',
+    fontWeight: '400',
     transition: '0.3s',
 
     _hover: {
@@ -95,5 +104,9 @@ const css = {
     _hover: {
       color: '#EE1818'
     }
+  },
+  menuItem: {
+    top: '50px',
+    minWidth: '120px'
   }
 };

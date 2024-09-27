@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './_components/Header';
 import Main from './_components/Main';
 import Section from './_components/Section';
+import Link from 'next/link';
 
 function index() {
   return (
@@ -30,6 +31,9 @@ function index() {
       <footer>
         <Footer />
       </footer>
+      <Link className="position-link" href={'/alstar-product/1'}>
+        ALSTAR™ A1
+      </Link>
     </>
   );
 }

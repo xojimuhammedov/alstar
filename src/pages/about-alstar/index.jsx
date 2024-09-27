@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './_components/Header';
 import Main from './_components/Main';
 import Partnership from './_components/Partnership';
+import Link from 'next/link';
 
 function AboutAlstar() {
   return (
@@ -31,6 +32,9 @@ function AboutAlstar() {
         <footer>
           <Footer />
         </footer>
+        <Link className="position-link" href={'/alstar-product/1'}>
+          ALSTAR™ A1
+        </Link>
       </>
     </>
   );

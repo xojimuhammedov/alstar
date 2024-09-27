@@ -37,7 +37,7 @@ export default function Home() {
         <footer>
           <Footer />
         </footer>
-        <Link className="position-link" href={'/alstar-product'}>
+        <Link className="position-link" href={'/alstar-product/1'}>
           ALSTAR™ A1
         </Link>
       </>
