@@ -50,8 +50,8 @@ function Main() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>{data[`title_${i18n?.language}`]}</Heading>
-        <Text {...css.text}>{data[`text_${i18n?.language}`]}</Text>
+        <Heading {...css.title}>{data?.[`title_${i18n?.language}`]}</Heading>
+        <Text {...css.text}>{data?.[`text_${i18n?.language}`]}</Text>
       </Box>
     </Box>
   );
