@@ -54,16 +54,16 @@ function Footer() {
             <Heading {...css.title}>NEWSLETTER SUBSCRIPTION</Heading>
             <Input {...css.input} type="email" placeholder="e-mail" />
             <Flex mt={'12px'} gap={'12px'}>
-              <Link href="/">
+              <Link href="https://www.instagram.com/alstar.uz">
                 <Instagram width={'25px'} height={'25px'} />
               </Link>
-              <Link href="/">
+              <Link href="https://www.facebook.com/profile.php?id=61553429155300">
                 <Facebook width={'25px'} height={'25px'} />
               </Link>
-              <Link href="/">
+              <Link href="https://t.me/AlstarDibond">
                 <Telegram width={'25px'} height={'25px'} />
               </Link>
-              <Link href="/">
+              <Link  href="https://www.youtube.com/@uzbekistanalstar4978">
                 <YouTube width={'25px'} height={'25px'} />
               </Link>
             </Flex>
