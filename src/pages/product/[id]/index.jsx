@@ -1,12 +1,26 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Head from 'next/head';
-import React from 'react';
-import Header from './_components/Header';
-import Main from './_components/Main';
-import Projects from './_components/Projects';
+import Header from '../_components/Header';
+import Main from '../_components/Main';
+import Projects from '../_components/Projects';
+
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { BASE_URL } from '@/api';
 
 function Product() {
+  const router = useRouter().query.id;
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/projects/${router}`)
+      .then((res) => setProducts(res?.data?.data))
+      .catch((err) => console.log(err));
+  }, [router]);
+
   return (
     <>
       <Head>
@@ -19,10 +33,10 @@ function Product() {
         <Navbar />
       </nav>
       <header>
-        <Header />
+        <Header products={products} />
       </header>
       <main>
-        <Main />
+        <Main products={products} />
       </main>
       <section>
         <Projects />

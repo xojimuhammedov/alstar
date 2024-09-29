@@ -1,11 +1,23 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Head from 'next/head';
-import React from 'react';
 import Header from './_components/Header';
 import Main from './_components/Main';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { BASE_URL } from '@/api';
 
 function AlstarProduct() {
+  const router = useRouter().query.id;
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/products/${router}`)
+      .then((res) => setProducts(res?.data?.data))
+      .catch((err) => console.log(err));
+  }, [router]);
   return (
     <>
       <Head>
@@ -18,10 +30,10 @@ function AlstarProduct() {
         <Navbar />
       </nav>
       <header>
-        <Header />
+        <Header products={products} />
       </header>
       <main>
-        <Main />
+        <Main products={products} />
       </main>
       <footer>
         <Footer />

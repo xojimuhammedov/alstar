@@ -122,8 +122,12 @@ body {
   top: 250px;
 }
 
-
-.language-image{
-  width:25px;
-  height:25px;  
+.language-image {
+  width: 25px;
+  height: 25px;
 }
+
+/* .main-products h2, strong {
+  font-size: 30px;
+  font-weight: 400 !important;
+} */
