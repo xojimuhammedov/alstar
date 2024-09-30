@@ -4,8 +4,8 @@ function Main({ products }) {
   const { i18n } = useTranslation();
 
   return (
-    <Box p={'36px 0'}>
-      <Box className="container-mix main-products">
+    <Box className="main-products" p={'36px 0'}>
+      <Box className="container-mix">
         <Text
           {...css.text}
           dangerouslySetInnerHTML={{

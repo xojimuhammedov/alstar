@@ -14,7 +14,7 @@ function Section() {
             />
             <Heading {...css.title}>Projects</Heading>
             <Text {...css.text}>
-              Embark on a journey around the globe and discover the variety of ALPOLICTM.
+              Embark on a journey around the globe and discover the variety of ALSTAR.
             </Text>
             <Link href="/" {...css.link}>
               Learn More
@@ -24,11 +24,12 @@ function Section() {
             <Image
               {...css.image}
               alt="Project One"
-              src="https://www.alpolic.eu/uploads/media/filter-540px/07/37-_Kachel_projekte_750x400.webp?v=2-0"
+              src="https://www.alpolic.eu/uploads/media/filter-540px/02/52-kachel_international_750x400.webp?v=2-0"
             />
-            <Heading {...css.title}>Projects</Heading>
+            <Heading {...css.title}>Project-Highlights</Heading>
             <Text {...css.text}>
-              Embark on a journey around the globe and discover the variety of ALPOLICTM.
+              Discover architectural highlights that captivate with extraordinary colours, shapes or
+              finishes.
             </Text>
             <Link href="/" {...css.link}>
               Learn More

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 function Main({ products }) {
   const { i18n } = useTranslation();
   return (
-    <Box p="36px 0">
+    <Box className='main-products' p="36px 0">
       <Box className="container-mix">
         {/* <Heading {...css.title}>
           Why ALSTAR™ aluminium composite panels are the ideal choice for your façade project.
