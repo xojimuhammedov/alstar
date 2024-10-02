@@ -6,8 +6,10 @@ import Instagram from '@/assets/svg/Instagram';
 import Facebook from '@/assets/svg/Facebook';
 import Telegram from '@/assets/svg/Telegram';
 import YouTube from '@/assets/svg/YouTube';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <Box {...css.footer}>
       <Box className="container-mix">
@@ -26,28 +28,28 @@ function Footer() {
             <Link {...css.link} href="/">
               Products
             </Link>
-            <Link {...css.link} href="/">
-              Inspirations
+            <Link href="/inspirations">
+              <Text {...css.link}>{t('nav6')}</Text>
             </Link>
-            <Link {...css.link} href="/">
-              Colours & Samples
+            <Link href="/colour">
+              <Text {...css.link}>{t('nav7')}</Text>
             </Link>
-            <Link {...css.link} href="/">
-              Service & Downloads
+            <Link href="/service-download">
+              <Text {...css.link}>{t('nav8')}</Text>
             </Link>
-            <Link {...css.link} href="/">
-              News
+            <Link href="/">
+              <Text {...css.link}>{t('nav9')}</Text>
             </Link>
           </Box>
           <Box {...css.list}>
-            <Link {...css.link} href="/">
-              About ALSTAR™
+            <Link href="/about-alstar">
+              <Text {...css.link}>{t('nav1')}</Text>
             </Link>
-            <Link {...css.link} href="/">
-              Career
+            <Link href="/career">
+              <Text {...css.link}>{t('nav2')}</Text>
             </Link>
-            <Link {...css.link} href="/">
-              Contact
+            <Link href="/contact">
+              <Text {...css.link}>{t('nav3')}</Text>
             </Link>
           </Box>
           <Box {...css.list}>
@@ -63,7 +65,7 @@ function Footer() {
               <Link href="https://t.me/AlstarDibond">
                 <Telegram width={'25px'} height={'25px'} />
               </Link>
-              <Link  href="https://www.youtube.com/@uzbekistanalstar4978">
+              <Link href="https://www.youtube.com/@uzbekistanalstar4978">
                 <YouTube width={'25px'} height={'25px'} />
               </Link>
             </Flex>

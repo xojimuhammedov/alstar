@@ -12,8 +12,10 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box className="header" position={'relative'}>
       <Swiper
@@ -38,7 +40,7 @@ function Header() {
               best choice for you and your project!
             </Text>
             <Link {...css.link} href="/">
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
         </SwiperSlide>
@@ -59,7 +61,7 @@ function Header() {
               composite panels so superior.
             </Text>
             <Link {...css.link} href="/">
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
         </SwiperSlide>
@@ -80,7 +82,7 @@ function Header() {
               cutting - with clean cutting edges.
             </Text>
             <Link {...css.link} href="/">
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
         </SwiperSlide>
@@ -97,10 +99,11 @@ function Header() {
           <Box {...css.box}>
             <Heading {...css.title}>INSTALLATION PERFORMANCE</Heading>
             <Text {...css.text}>
-              With ALSTAR  you save up to 50 % on the substructure and installation time without compromising the stability of the façade!
+              With ALSTAR you save up to 50 % on the substructure and installation time without
+              compromising the stability of the façade!
             </Text>
             <Link {...css.link} href="/">
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
         </SwiperSlide>

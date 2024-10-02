@@ -1,11 +1,13 @@
 import { Box, Button, Heading, Input, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Form() {
+  const { t } = useTranslation();
   return (
     <Box {...css.form}>
       <Box className="container-mix">
-        <Heading {...css.title}>Here you get all our attention</Heading>
+        <Heading {...css.title}>{t('Here you get all our attention')}</Heading>
         <Text {...css.text}>
           Would you like more information about ALSTAR? Then write to us. Please fill in the contact
           form below and send it to us. Our experts will take care of your request as soon as
@@ -13,7 +15,7 @@ function Form() {
         </Text>
 
         <Text m={'24px 0'} {...css.text}>
-          Do you have any questions or suggestions?
+          {t('Do you have any questions or suggestions?')}
         </Text>
         <Text mb={'24px'} {...css.text}>
           We will be happy to help you. Use our contact form and send us your inquiry. You will
@@ -25,39 +27,41 @@ function Form() {
         <form action="">
           <SimpleGrid columns={3} gap="24px">
             <label className="form-label" htmlFor="">
-              First name*
+              {t('First name*')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              Last name*
+              {t('Last name*')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              Company*
+              {t('Company*')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              email*
+              {t('email*')}
               <Input {...css.input} type="email" />
             </label>
             <label className="form-label" htmlFor="">
-              Street
+              {t('Street')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              Location / Town
+              {t('Location / Town')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              Country
+              {t('Country')}
               <Input {...css.input} type="text" />
             </label>
             <label className="form-label" htmlFor="">
-              Phone number
+              {t('Phone number')}
               <Input {...css.input} type="text" />
             </label>
           </SimpleGrid>
-          <Button type="submit" {...css.button}>Submit</Button>
+          <Button type="submit" {...css.button}>
+            {t('Submit')}
+          </Button>
         </form>
       </Box>
     </Box>
@@ -89,13 +93,13 @@ const css = {
   },
   button: {
     background: '#111',
-    color:"#fff",
-    height:"40px",
-    width:"120px",
-    fontSize:"16px",
-    lineHeight:"25px",
-    borderRadius:"6px",
-    marginTop:"24px",
-    cursor:"pointer"
+    color: '#fff',
+    height: '40px',
+    width: '120px',
+    fontSize: '16px',
+    lineHeight: '25px',
+    borderRadius: '6px',
+    marginTop: '24px',
+    cursor: 'pointer'
   }
 };

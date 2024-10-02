@@ -1,11 +1,13 @@
 import { Box, Heading } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box className="contact" {...css.header}>
       <Box className="container">
-        <Heading {...css.title}>Colours & samples</Heading>
+        <Heading {...css.title}>{t('nav7')}</Heading>
       </Box>
     </Box>
   );
@@ -23,6 +25,6 @@ const css = {
     fontWeight: '200',
     paddingTop: '25px',
     color: '#111',
-    textTransform:"uppercase"
+    textTransform: 'uppercase'
   }
 };

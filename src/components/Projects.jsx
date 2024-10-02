@@ -13,7 +13,7 @@ import { Navigation } from 'swiper/modules';
 function Projects() {
   return (
     <Box p={'36px 0'}>
-      <Heading {...css.title}>All over the world: Our References</Heading>
+      <Heading {...css.title}>All over the country: Our References</Heading>
       <Swiper
         modules={[Navigation]}
         navigation={{

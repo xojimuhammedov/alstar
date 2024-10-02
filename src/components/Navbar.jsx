@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 function Navbar() {
   const [products, setProducts] = useState();
   const [projects, setProjects] = useState();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     axios
@@ -30,13 +30,13 @@ function Navbar() {
       <Box className="container">
         <Flex {...css.top}>
           <Link href="/about-alstar">
-            <Text {...css.links}>About ALSTAR™</Text>
+            <Text {...css.links}>{t('nav1')}</Text>
           </Link>
           <Link href="/career">
-            <Text {...css.links}>Career</Text>
+            <Text {...css.links}>{t('nav2')}</Text>
           </Link>
           <Link href="/contact">
-            <Text {...css.links}>Contact</Text>
+            <Text {...css.links}>{t('nav3')}</Text>
           </Link>
           <Language />
         </Flex>
@@ -45,11 +45,8 @@ function Navbar() {
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
           </Link>
           <Flex {...css.item}>
-            {/* <Link href="/product">
-              <Text {...css.link}>Why Alstar</Text>
-            </Link> */}
             <Menu isLazy>
-              <MenuButton {...css.link}>Why Alstar</MenuButton>
+              <MenuButton {...css.link}>{t('nav4')}</MenuButton>
               <MenuList {...css.menuItem} zIndex={'999'}>
                 {projects?.map((item, index) => (
                   <MenuItem textTransform={'uppercase'} key={index}>
@@ -59,7 +56,7 @@ function Navbar() {
               </MenuList>
             </Menu>
             <Menu isLazy>
-              <MenuButton {...css.link}>Products</MenuButton>
+              <MenuButton {...css.link}>{t('nav5')}</MenuButton>
               <MenuList {...css.menuItem} zIndex={'999'}>
                 {products?.map((item, index) => (
                   <MenuItem key={index}>
@@ -71,16 +68,16 @@ function Navbar() {
               </MenuList>
             </Menu>
             <Link href="/inspirations">
-              <Text {...css.link}>Inspirations</Text>
+              <Text {...css.link}>{t('nav6')}</Text>
             </Link>
             <Link href="/colour">
-              <Text {...css.link}>Colours & Samples</Text>
+              <Text {...css.link}>{t('nav7')}</Text>
             </Link>
             <Link href="/service-download">
-              <Text {...css.link}>Service & Downloads</Text>
+              <Text {...css.link}>{t("nav8")}</Text>
             </Link>
             <Link href="/">
-              <Text {...css.link}>News</Text>
+              <Text {...css.link}>{t("nav9")}</Text>
             </Link>
           </Flex>
         </Flex>

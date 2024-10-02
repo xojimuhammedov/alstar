@@ -27,7 +27,28 @@
     "name": "ALSTAR™ – Barcha ma'lumotlar darhol mavjud",
     "text": "Bu yerda siz ALSTARTM haqida barcha muhim ma'lumotlarni tez va qulay tarzda yuklab olishingiz mumkin. Sizda hali ham savollar bormi yoki ma'lumotlarni bosma shaklda olishni xohlaysizmi? Shunchaki biz bilan bog'laning, biz sizga yordam berishdan mamnun bo'lamiz."
   },
-  "alstarProduct": {
-    "name": ""
-  }
+  "nav1": "ALSTAR™ haqida",
+  "nav2": "Karyera",
+  "nav3": "Aloqa",
+  "nav4": "Nima uchun Alstar",
+  "nav5": "Mahsulotlar",
+  "nav6": "Ilhomlantirish",
+  "nav7": "Ranglar va namunalar",
+  "nav8": "Xizmat va yuklab olishlar",
+  "nav9": "Yangiliklar",
+  "Learn More": "Batafsil",
+  "News: Current news and articles": "Yangiliklar: Oxirgi yangiliklar va maqolalar",
+  "Shape your professional future": "Professional kelajagingizni yarating",
+  "Are you looking for a new professional challenge with optimal entry and promotion opportunities in a global company? Shape your professional future with ALSTAR™. Take a look at our current job offers and discover what speaks for us as an employer.": "Siz global kompaniyada kirish va ko‘tarilish imkoniyatlari bilan yangi professional qiyinchilik izlayapsizmi? Professional kelajagingizni ALSTAR™ bilan yarating. Bizning hozirgi ish takliflarimiz bilan tanishing va nima uchun biz yaxshi ish beruvchi ekanligimizni bilib oling.",
+  "Submit": "Yuborish",
+  "Phone number": "Telefon raqami",
+  "Country": "Mamlakat",
+  "Location / Town": "Joylashuv / Shahar",
+  "Street": "Ko‘cha",
+  "email*": "email*",
+  "Company*": "Kompaniya*",
+  "Last name*": "Familiya*",
+  "First name*": "Ism*",
+  "Do you have any questions or suggestions?": "Savol yoki takliflaringiz bormi?",
+  "Here you get all our attention": "Bu yerda siz bizning to‘liq e’tiborimizni olasiz"
 }
