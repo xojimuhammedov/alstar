@@ -50,5 +50,17 @@
   "Last name*": "Familiya*",
   "First name*": "Ism*",
   "Do you have any questions or suggestions?": "Savol yoki takliflaringiz bormi?",
-  "Here you get all our attention": "Bu yerda siz bizning to‘liq e’tiborimizni olasiz"
+  "Here you get all our attention": "Bu yerda siz bizning to‘liq e’tiborimizni olasiz",
+  "career": {
+    "name": "Professional kelajagingizni shakllantiring",
+    "text": "Yangi professional sinovlar va global kompaniyada kirish va ko‘tarilish imkoniyatlarini izlayapsizmi? ALSTARTM bilan professional kelajagingizni yarating. Hozirgi bo‘sh ish o‘rinlarimizni ko‘rib chiqing va bizni ish beruvchi sifatida tanlashingiz uchun sabablarni bilib oling."
+  },
+  "fairs": {
+    "name": "Siz bilan uchrashishni intiqlik bilan kutamiz",
+    "text": "ALSTARTM mahsulotlarini qayerda jonli ko'rishingiz va mutaxassislarimizdan joyida maslahat olishingiz mumkin? Bu yerda biz sizni kutib olishdan mamnun bo'ladigan barcha muhim soha tadbirlari va ko'rgazma sanalarini topishingiz mumkin. ALSTARTM olamiga sho'ng'ing."
+  },
+  "news": {
+    "name": "BE.UP.TO.DATE.",
+    "text": "Biz sizni har doim muhim yangiliklardan xabardor qilishni xohlaymiz. Shuning uchun, yangiliklar bo'limimizda ALSTARTM haqida barcha muhim ma'lumotlarni topishingiz mumkin."
+  }
 }

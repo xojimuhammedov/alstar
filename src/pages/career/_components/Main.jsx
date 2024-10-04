@@ -7,10 +7,9 @@ function Main() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>{t('Shape your professional future')}</Heading>
+        <Heading {...css.title}>{t("career.name")}</Heading>
         <Text {...css.text}>
-          {t(
-            'Are you looking for a new professional challenge with optimal entry and promotion opportunities in a global company? Shape your professional future with ALSTAR™. Take a look at our current job offers and discover what speaks for us as an employer.'
+          {t("career.text"
           )}
         </Text>
       </Box>
