@@ -14,7 +14,7 @@ function News() {
           <Image {...css.image} src={NewsImage.src} alt="NewsImage" />
           <Box p="16px">
             <Heading {...css.name}>
-              20 years of ALSTAR™: Successful for 50 years with innovation and know-how
+              12 years of ALSTAR™: Successful for 50 years with innovation and know-how
             </Heading>
             <Text {...css.text}>
               We are celebrating our 50th anniversary: with numerous innovations, we have had a
@@ -29,7 +29,7 @@ function News() {
           <Image {...css.image} src={NewsImage.src} alt="NewsImage" />
           <Box p="16px">
             <Heading {...css.name}>
-              20 years of ALSTAR™: Successful for 50 years with innovation and know-how
+              12 years of ALSTAR™: Successful for 50 years with innovation and know-how
             </Heading>
             <Text {...css.text}>
               We are celebrating our 50th anniversary: with numerous innovations, we have had a

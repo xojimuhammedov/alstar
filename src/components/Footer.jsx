@@ -17,16 +17,16 @@ function Footer() {
           <Box>
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
             <Text {...css.text}>
-              ALSTAR — это бренд алюминиевых композитных панелей (ACP) типа PE, FR-B1, FR-A2,
-              принадлежащий “GOLDEN HAPPINESS” LLC.
+              ALSTAR — бренд алюминиевых композитных панелей типа PE, FR-B1, FR-A2, принадлежащий
+              “GOLDEN HAPPINESS” LLC.
             </Text>
           </Box>
           <Box {...css.list}>
             <Link {...css.link} href="/">
-              Why ALSTAR
+              {t("nav4")}
             </Link>
             <Link {...css.link} href="/">
-              Products
+              {t("nav5")}
             </Link>
             <Link href="/inspirations">
               <Text {...css.link}>{t('nav6')}</Text>
@@ -53,8 +53,7 @@ function Footer() {
             </Link>
           </Box>
           <Box {...css.list}>
-            <Heading {...css.title}>NEWSLETTER SUBSCRIPTION</Heading>
-            <Input {...css.input} type="email" placeholder="e-mail" />
+            <Heading {...css.title}>Social Media</Heading>
             <Flex mt={'12px'} gap={'12px'}>
               <Link href="https://www.instagram.com/alstar.uz">
                 <Instagram width={'25px'} height={'25px'} />
