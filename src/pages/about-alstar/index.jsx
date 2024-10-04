@@ -32,7 +32,7 @@ function AboutAlstar() {
         <footer>
           <Footer />
         </footer>
-        <Link className="position-link" href={'/alstar-product/0ee58348-529c-497b-ac1f-f12a8a1afea0'}>
+        <Link className="position-link" href={'/alstar-product/19cd21bb-10e4-4908-b170-fe9805cc4991'}>
           ALSTAR™ A2
         </Link>
       </>

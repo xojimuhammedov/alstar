@@ -127,7 +127,7 @@ body {
   height: 25px;
 }
 
-.main-products h2 strong {
+.main-products p strong {
   font-size: 30px;
   font-weight: 400 !important;
   text-transform: uppercase;

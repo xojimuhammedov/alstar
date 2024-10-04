@@ -62,5 +62,18 @@
   "news": {
     "name": "BE.UP.TO.DATE.",
     "text": "We want you to always be up to date on everything important. In our news section, you will find all the important information about ALSTARTM."
+  },
+  "news-list": {
+    "name": "News",
+    "text": "Here you can find all current news about ALSTARTM, including innovations, important events, and company news."
+  },
+  "news-events": {
+    "name": "Fairs and Events",
+    "text": "ALSTARTM is represented at numerous national trade fairs and events. Here you will find an overview of when and where you can meet us. We look forward to your visit and many interesting conversations."
+  },
+  "newsListText": "We want you to always be up to date on everything important. In our news section, you will find all the important information about ALSTARTM.",
+  "events": {
+    "name": "We look forward to meeting you",
+    "text": "Where can you experience ALSTARTM live and get on-site advice from our experts? Here you will find all important industry events and trade fair dates where we would be pleased to welcome you. Immerse yourself in the world of ALSTARTM."
   }
 }
