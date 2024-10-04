@@ -7,7 +7,7 @@ function Header() {
       <Image
         {...css.image}
         src={
-          'https://www.alpolic.eu/uploads/media/fullsize-1920x/07/7-header_webnews_3840x537_neu_4.webp?v=6-0'
+          'https://www.alpolic.eu/uploads/media/fullsize-1920x/00/410-header_fairs_3840x537.webp?v=2-0'
         }
         alt="BannerOne"
       />
