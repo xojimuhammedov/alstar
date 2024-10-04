@@ -16,7 +16,7 @@ function Section() {
             <Text {...css.text}>
               Embark on a journey around the globe and discover the variety of ALSTAR.
             </Text>
-            <Link href="/" {...css.link}>
+            <Link href="/projects-list" {...css.link}>
               Learn More
             </Link>
           </Box>
@@ -31,7 +31,7 @@ function Section() {
               Discover architectural highlights that captivate with extraordinary colours, shapes or
               finishes.
             </Text>
-            <Link href="/" {...css.link}>
+            <Link href="/projects-hight" {...css.link}>
               Learn More
             </Link>
           </Box>

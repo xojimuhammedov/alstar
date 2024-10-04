@@ -1,6 +1,8 @@
 import { Box, Heading, Image, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
-import DesignImage from '@/assets/design.webp';
+
+import ScreenSix from "@/assets/screen10.jpg";
+import ScreenSeven from "@/assets/screen11.jpg";
 
 function Section() {
   return (
@@ -211,6 +213,8 @@ function Section() {
             <Heading {...css.name}>Blue | M7787-G30</Heading>
           </Box>
         </SimpleGrid>
+        <Image src={ScreenSix.src} alt="Image" />
+        <Image src={ScreenSeven.src} alt="Image" />
       </Box>
     </Box>
   );
