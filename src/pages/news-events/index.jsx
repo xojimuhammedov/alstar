@@ -4,7 +4,6 @@ import Head from 'next/head';
 import React from 'react';
 import Header from './_components/Header';
 import Main from './_components/Main';
-import Link from 'next/link';
 
 function Service() {
   return (
@@ -27,9 +26,6 @@ function Service() {
       <footer>
         <Footer />
       </footer>
-      <Link className="position-link" href={'/alstar-product/0ee58348-529c-497b-ac1f-f12a8a1afea0'}>
-        ALSTAR™ A2
-      </Link>
     </>
   );
 }

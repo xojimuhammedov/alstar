@@ -40,7 +40,7 @@ export default function Home() {
         <Link
           className="position-link"
           href={'/alstar-product/0ee58348-529c-497b-ac1f-f12a8a1afea0'}>
-          ALSTAR™ A1
+          ALSTAR™ A2
         </Link>
       </>
     </>

@@ -78,8 +78,7 @@ function Section() {
               }
               alt="DesignImage"
             />
-            <Heading {...css.name}>Anodic Silver | MD9500-G30
-            </Heading>
+            <Heading {...css.name}>Anodic Silver | MD9500-G30</Heading>
           </Box>
           <Box>
             <Image
@@ -89,8 +88,127 @@ function Section() {
               }
               alt="DesignImage"
             />
-            <Heading {...css.name}>Anodisation Copper | 049
-            </Heading>
+            <Heading {...css.name}>Anodisation Copper | 049</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/01/811-Anodisation_Red_058.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Anodisation Red | 058</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/02/812-Anodized_Silver_044.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Anodisation Silver | 044</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/03/833-Anthracite_Gray_MA_7105-G30.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Anthracite Gray | MA7105-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/06/76-MB126-G30_Apple_Red.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Apple Red |MB126-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/09/79-MBS02-G30_Aqua-Green.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Aqua Green | MBS02-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/09/869-Arctic_Gold_MI_0021-G30-ret.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Arctic Gold | MI0021-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/07/867-Artic_Gray_MI_0019-G80-ret.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Artic Gray | MI0019-G80</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/07/107-MJ062-Black.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Black | MJ062-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/03/813-Black_C35_045.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Black C35 | 045</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/04/834-Black_Gray_MA_7021-G30.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Black Gray | MA7021-G30</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/06/866-Black_Titanium_MI_0022-G80-ret.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Black Titanium | MI0022-G80</Heading>
+          </Box>
+          <Box>
+            <Image
+              {...css.image}
+              src={
+                'https://www.alpolic.eu/uploads/media/fullsize-3840x/02/62-M7787-G30_Blue.jpg?v=1-0'
+              }
+              alt="DesignImage"
+            />
+            <Heading {...css.name}>Blue | M7787-G30</Heading>
           </Box>
         </SimpleGrid>
       </Box>

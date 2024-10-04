@@ -62,5 +62,18 @@
   "news": {
     "name": "BE.UP.TO.DATE.",
     "text": "Biz sizni har doim muhim yangiliklardan xabardor qilishni xohlaymiz. Shuning uchun, yangiliklar bo'limimizda ALSTARTM haqida barcha muhim ma'lumotlarni topishingiz mumkin."
+  },
+  "news-list": {
+    "name": "Yangiliklar",
+    "text": "Bu yerda siz ALSTARTM haqidagi barcha dolzarb yangiliklarni topishingiz mumkin: innovatsiyalar, muhim voqealar va kompaniya yangiliklari."
+  },
+  "news-events": {
+    "name": "Ko'rgazmalar va tadbirlar",
+    "text": "ALSTARTM ko'plab milliy ko'rgazmalar va tadbirlarda ishtirok etadi. Bu yerda qachon va qayerda bizni uchratishingiz mumkinligi haqida umumiy ma'lumotni topasiz. Sizning tashrifingizni va qiziqarli suhbatlarni intiqlik bilan kutamiz."
+  },
+  "newsListText": "Biz sizni har doim muhim yangiliklardan xabardor qilishni xohlaymiz. Shuning uchun, yangiliklar bo'limimizda ALSTARTM haqida barcha muhim ma'lumotlarni topishingiz mumkin.",
+  "events":{
+    "name":"Siz bilan uchrashishni intiqlik bilan kutamiz",
+    "text":"ALSTARTM mahsulotlarini qayerda jonli ko'rishingiz va mutaxassislarimizdan joyida maslahat olishingiz mumkin? Bu yerda biz sizni kutib olishdan mamnun bo'ladigan barcha muhim soha tadbirlari va ko'rgazma sanalarini topishingiz mumkin. ALSTARTM olamiga sho'ng'ing."
   }
 }

@@ -76,7 +76,7 @@ function Navbar() {
             <Link href="/service-download">
               <Text {...css.link}>{t("nav8")}</Text>
             </Link>
-            <Link href="/">
+            <Link href="/news">
               <Text {...css.link}>{t("nav9")}</Text>
             </Link>
           </Flex>

@@ -10,6 +10,13 @@ import CarouselOne from '@/assets/slider1.jpg';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { Navigation } from 'swiper/modules';
 
+import ImageOne from '@/assets/image1.jpg';
+import ImageTwo from '@/assets/image2.jpg';
+import ImageThree from '@/assets/image3.jpg';
+import ImageFour from '@/assets/image4.jpg';
+import ImageFive from '@/assets/image5.jpg';
+import ImageSix from '@/assets/image6.jpg';
+
 function Projects() {
   return (
     <Box p={'36px 0'}>
@@ -25,48 +32,28 @@ function Projects() {
         slidesPerView={3}
         className="mySwiper">
         <SwiperSlide>
+          <Image {...css.image} src={ImageOne.src} alt="CarouselOne" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image {...css.image} src={ImageTwo.src} alt="CarouselOne" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image {...css.image} src={ImageThree.src} alt="CarouselOne" />
+        </SwiperSlide>
+        <SwiperSlide>
           <Image
             {...css.image}
-            src={
-              'https://www.alpolic.eu/uploads/media/slider-750x/01/191-Kachel_fr_GUERALLAR_750x400.webp?v=3-0'
+            src={ImageFour.src
             }
             alt="CarouselOne"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <Image
-            {...css.image}
-            src={
-              'https://www.alpolic.eu/uploads/media/slider-750x/05/165-La%20Salle%20College_Swan%20Valley_WA_Australia.webp?v=5-0'
-            }
-            alt="CarouselOne"
-          />
+          <Image {...css.image} src={ImageSix.src} alt="CarouselOne" />
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            {...css.image}
-            src={
-              'https://www.alpolic.eu/uploads/media/slider-750x/02/1012-ALP_STI_ASBL_Kockelscheuer.webp?v=1-0'
-            }
-            alt="CarouselOne"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            {...css.image}
-            src={
-              'https://www.alpolic.eu/uploads/media/slider-750x/03/973-ALP_TrillaintProjectUzbekistan_750x400.webp?v=1-0'
-            }
-            alt="CarouselOne"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image {...css.image} src={CarouselOne.src} alt="CarouselOne" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src={
-              'https://www.alpolic.eu/uploads/media/slider-750x/04/974-Tashkent_City_Mall_750x400_n_ret.webp?v=3-0'
+            src={ImageFive.src
             }
             alt="CarouselOne"
             {...css.image}

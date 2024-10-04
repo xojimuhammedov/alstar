@@ -7,8 +7,8 @@ function Main() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>{t('service.name')}</Heading>
-        <Text {...css.text}>{t('service.text')}</Text>
+        <Heading {...css.title}>{t('BE.UP.TO.DATE.')}</Heading>
+        <Text {...css.text}>{t('newsListText')}</Text>
       </Box>
     </Box>
   );
