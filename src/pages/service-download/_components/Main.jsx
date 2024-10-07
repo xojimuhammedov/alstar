@@ -19,11 +19,9 @@ function Main() {
               alt="Project One"
               src="https://www.alpolic.eu/uploads/media/filter-540px/00/40-kachel_download_750x400_neu.webp?v=3-0"
             />
-            <Heading {...css.name}>Downloads</Heading>
+            <Heading {...css.name}>{t("Downloads")}</Heading>
             <Text {...css.text}>
-              Are you looking for detailed information about our products, colors, tender texts or
-              approvals? In our download center you have everything at your fingertips in a matter
-              of seconds.
+              {t("Are you looking for detailed information about our products, colors, tender texts or approvals? In our download center you have everything at your fingertips in a matter of seconds.")}
             </Text>
             <Link href="/downloads">
               <Text {...css.link}>{t('Learn More')}</Text>
@@ -35,11 +33,9 @@ function Main() {
               alt="Project One"
               src="https://www.alpolic.eu/uploads/media/filter-540px/02/42-kachel_service_750x400_neu.webp?v=3-0"
             />
-            <Heading {...css.name}>Service</Heading>
+            <Heading {...css.name}>{t("Service")}</Heading>
             <Text {...css.text}>
-              You would like to request a colour sample or need support with your project? Then
-              simply contact us. Our competent contact persons will be happy to advise you at any
-              time.
+              {t("You would like to request a colour sample or need support with your project? Then simply contact us. Our competent contact persons will be happy to advise you at any time.")}
             </Text>
             <Link href="/services">
               <Text {...css.link}>{t('Learn More')}</Text>
@@ -87,7 +83,7 @@ const css = {
     fontSize: '14px',
     transition: '0.3s all',
     borderRadius: '12px',
-    width: '110px',
+    width: '140px',
     textAlign: 'center',
 
     _hover: {

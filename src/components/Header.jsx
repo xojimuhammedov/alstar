@@ -1,5 +1,4 @@
 import { Box, Heading, Image, Link, Text } from '@chakra-ui/react';
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import CarouselOne from '@/assets/slider1.jpg';
@@ -12,10 +11,25 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import axios from 'axios';
+import { BASE_URL, FILE_URL } from '@/api';
+
 function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [projects, setProjects] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/projects`)
+      .then((res) => {
+        const responseDataOne = res?.data?.data;
+        setProjects(responseDataOne);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <Box className="header" position={'relative'}>
       <Swiper
@@ -29,84 +43,23 @@ function Header() {
         loop
         modules={[Pagination, Navigation]}
         className="mySwiper">
-        <SwiperSlide>
-          <Box width={'100%'}>
-            <Image {...css.image} src={CarouselOne.src} alt="CarouselOne" />
-          </Box>
-          <Box {...css.box}>
-            <Heading {...css.title}>PERFORMANCE POWER FOR YOUR FAÇADE</Heading>
-            <Text {...css.text}>
-              More quality, more stability, more choice, lower costs: find out why ALPOLIC is the
-              best choice for you and your project!
-            </Text>
-            <Link {...css.link} href="/">
-              {t('Learn More')}
-            </Link>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box width={'100%'}>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/fullsize-1920x/01/981-ALP_Perf_Power_Produkt.webp?v=3-0'
-              }
-              alt="CarouselOne"
-            />
-          </Box>
-          <Box {...css.box}>
-            <Heading {...css.title}>PRODUCT PERFORMANCE</Heading>
-            <Text {...css.text}>
-              The special composition of the core and our unique fusion process make ALSTAR
-              composite panels so superior.
-            </Text>
-            <Link {...css.link} href="/">
-              {t('Learn More')}
-            </Link>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box width={'100%'}>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/fullsize-1920x/03/983-ALP_Perf_Power_Verarbeitung.webp?v=3-0'
-              }
-              alt="CarouselOne"
-            />
-          </Box>
-          <Box {...css.box}>
-            <Heading {...css.title}>PROCESSING PERFORMANCE</Heading>
-            <Text {...css.text}>
-              The unique material composition of ALSTAR guarantees precise edging, routing and
-              cutting - with clean cutting edges.
-            </Text>
-            <Link {...css.link} href="/">
-              {t('Learn More')}
-            </Link>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box width={'100%'}>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/fullsize-1920x/09/979-ALP_Perf_Power_Installation.webp?v=3-0'
-              }
-              alt="CarouselOne"
-            />
-          </Box>
-          <Box {...css.box}>
-            <Heading {...css.title}>INSTALLATION PERFORMANCE</Heading>
-            <Text {...css.text}>
-              With ALSTAR you save up to 50 % on the substructure and installation time without
-              compromising the stability of the façade!
-            </Text>
-            <Link {...css.link} href="/">
-              {t('Learn More')}
-            </Link>
-          </Box>
-        </SwiperSlide>
+        {projects?.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Box width={'100%'}>
+              <Image {...css.image} src={`${FILE_URL}/files/${item?.image}`} alt="CarouselOne" />
+            </Box>
+            <Box {...css.box}>
+              <Heading {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
+              {/* <Text {...css.text}>
+                More quality, more stability, more choice, lower costs: find out why ALPOLIC is the
+                best choice for you and your project!
+              </Text> */}
+              <Link {...css.link} href={`/product/${item?.id}`}>
+                {t('Learn More')}
+              </Link>
+            </Box>
+          </SwiperSlide>
+        ))}
         <div className="button-next-slide swiper-right next-button">
           <ChevronRightIcon fontSize={'34px'} />
         </div>

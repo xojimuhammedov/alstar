@@ -15,14 +15,22 @@ function Navbar() {
   useEffect(() => {
     axios
       .get(`${BASE_URL}/products`)
-      .then((res) => setProducts(res?.data?.data))
+      .then((res) => {
+        const responseData = res?.data?.data
+        const firstElement = res?.data?.data?.splice(0, 1); 
+        responseData.push(firstElement[0])
+        setProducts(responseData)
+      })
       .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
     axios
       .get(`${BASE_URL}/projects`)
-      .then((res) => setProjects(res?.data?.data))
+      .then((res) => {
+        const responseDataOne = res?.data?.data
+        setProjects(responseDataOne)
+      })
       .catch((err) => console.log(err));
   }, []);
   return (

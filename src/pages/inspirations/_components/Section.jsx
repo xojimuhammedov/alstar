@@ -1,6 +1,7 @@
 import { Box, Heading, Image, Link, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ImageFour from '@/assets/image2.jpg';
 
 function Section() {
   const { t } = useTranslation();
@@ -16,21 +17,19 @@ function Section() {
             />
             <Heading {...css.title}>{t('Projects')}</Heading>
             <Text {...css.text}>
-              {t("Embark on a journey around the globe and discover the variety of ALSTAR.")}
+              {t('Embark on a journey around the globe and discover the variety of ALSTAR.')}
             </Text>
             <Link href="/projects-list" {...css.link}>
               {t('Learn More')}
             </Link>
           </Box>
           <Box>
-            <Image
-              {...css.image}
-              alt="Project One"
-              src="https://www.alpolic.eu/uploads/media/filter-540px/02/52-kachel_international_750x400.webp?v=2-0"
-            />
+            <Image {...css.image} alt="Project One" src={ImageFour.src} />
             <Heading {...css.title}>{t('nav6')}</Heading>
             <Text {...css.text}>
-             {t("Discover architectural highlights that captivate with extraordinary colours, shapes or finishes.")}
+              {t(
+                'Discover architectural highlights that captivate with extraordinary colours, shapes or finishes.'
+              )}
             </Text>
             <Link href="/projects-hight" {...css.link}>
               {t('Learn More')}
@@ -48,7 +47,9 @@ const css = {
   image: {
     width: '100%',
     maxWidth: '100%',
-    minWidth: '100%'
+    minWidth: '100%',
+    height: '270px',
+    objectFit: 'cover'
   },
   title: {
     fontSize: '25px',

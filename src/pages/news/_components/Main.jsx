@@ -78,7 +78,7 @@ const css = {
     fontSize: '14px',
     transition: '0.3s all',
     borderRadius: '12px',
-    width: '110px',
+    width: '140px',
     textAlign: 'center',
 
     _hover: {

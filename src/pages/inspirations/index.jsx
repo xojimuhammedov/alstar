@@ -31,7 +31,7 @@ function index() {
       <footer>
         <Footer />
       </footer>
-      <Link className="position-link" href={'/alstar-product/19cd21bb-10e4-4908-b170-fe9805cc4991'}>
+      <Link className="position-link" href={'/alstar-product/a2b670a8-6e0c-49f2-9733-82194833f761'}>
         ALSTAR A2
       </Link>
     </>

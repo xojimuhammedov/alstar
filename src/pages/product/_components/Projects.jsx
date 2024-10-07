@@ -1,9 +1,23 @@
-import { Box, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Heading, Image, SimpleGrid, Text, Link } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import axios from 'axios';
+import { BASE_URL, FILE_URL } from '@/api';
+
 function Projects() {
-  const {t} = useTranslation()
+  const { t, i18n } = useTranslation();
+  const [projects, setProjects] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/projects`)
+      .then((res) => {
+        const responseDataOne = res?.data?.data
+        setProjects(responseDataOne)
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
@@ -11,42 +25,26 @@ function Projects() {
           {t('Boost your performance with ALSTAR: discover the benefits!')}
         </Heading>
         <SimpleGrid mt={'24px'} gap="24px" columns={3}>
-          <Box width={'100%'}>
+           {
+            projects?.map((item,index) => (
+              <Box key={index} width={'100%'}>
             <Image
               alt="Project"
               {...css.image}
-              src="https://www.alpolic.eu/uploads/media/filter-540px/06/1006-ALP_Perf_Power_Produkt.webp?v=1-0"
+              src={`${FILE_URL}/files/${item?.image}`}
             />
-            <Heading {...css.name}>Product Performance</Heading>
-            <Text {...css.text}>
+            <Heading {...css.name}>{item[`name_${i18n?.language}`]}</Heading>
+            <Link href={`/product/${item?.id}`} {...css.link}>
+              {t('Learn More')}
+            </Link>
+            {/* <Text {...css.text}>
               The special composition of the core material in combination with our unique fusion
               process makes ALSTAR composite panels so superior.
-            </Text>
+            </Text> */}
           </Box>
-          <Box width={'100%'}>
-            <Image
-              alt="Project"
-              {...css.image}
-              src="https://www.alpolic.eu/uploads/media/filter-540px/06/996-ALP_Perf_Power_Verarbeitung.webp?v=1-0"
-            />
-            <Heading {...css.name}>Processing Performance</Heading>
-            <Text {...css.text}>
-              Significantly more precise routing and cutting with clean cut edges. Only one person
-              required for edging even large panel formats.
-            </Text>
-          </Box>
-          <Box width={'100%'}>
-            <Image
-              alt="Project"
-              {...css.image}
-              src="https://www.alpolic.eu/uploads/media/filter-540px/03/993-ALP_Perf_Power_Installation.webp?v=1-0"
-            />
-            <Heading {...css.name}>Installation Performance</Heading>
-            <Text {...css.text}>
-              With ALSTAR you save up to 50 % on the substructure and installation time without
-              compromising the stability of the façade!
-            </Text>
-          </Box>
+            ))
+           }
+        
         </SimpleGrid>
       </Box>
     </Box>
@@ -59,7 +57,9 @@ const css = {
   image: {
     width: '100%',
     maxWidth: '100%',
-    minWidth: '100%'
+    minWidth: '100%',
+    height:"210px",
+    objectFit:"cover"
   },
   title: {
     fontSize: '32px',
@@ -70,14 +70,26 @@ const css = {
   name: {
     fontSize: '25px',
     lineHeight: '30px',
-    fontWeight: '300',
+    fontWeight: '400',
     color: '#111',
-    margin: '8px 0'
+    margin:"16px 0"
   },
   text: {
     fontSize: '16px',
     lineHeight: '24px',
     fontWeight: '200',
     color: '#111'
+  },
+  link: {
+    backgroundColor: '#111',
+    color: '#fff',
+    padding: '8px 15px',
+    fontWeight: '500',
+    fontSize: '14px',
+    transition: '0.3s all',
+
+    _hover: {
+      background: '#C22329'
+    }
   }
 };
