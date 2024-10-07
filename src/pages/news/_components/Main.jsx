@@ -9,7 +9,7 @@ function Main() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Heading {...css.title}>We will keep you up to date</Heading>
+        <Heading {...css.title}>{t('We will keep you up to date')}</Heading>
 
         <SimpleGrid mt={'48px'} gap={'36px'} columns={2}>
           <Box>
@@ -21,7 +21,7 @@ function Main() {
             <Heading {...css.name}>{t('news-list.name')}</Heading>
             <Text {...css.text}>{t('news-list.text')}</Text>
             <Link href="/news-list">
-              <Text {...css.link}>Learn More</Text>
+              <Text {...css.link}>{t('Learn More')}</Text>
             </Link>
           </Box>
           <Box>
@@ -33,7 +33,7 @@ function Main() {
             <Heading {...css.name}>{t('news-events.name')}</Heading>
             <Text {...css.text}>{t('news-events.text')}</Text>
             <Link href="/news-events">
-              <Text {...css.link}>Learn More</Text>
+              <Text {...css.link}>{t('Learn More')}</Text>
             </Link>
           </Box>
         </SimpleGrid>

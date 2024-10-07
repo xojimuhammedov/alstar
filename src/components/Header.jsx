@@ -57,7 +57,7 @@ function Header() {
           <Box {...css.box}>
             <Heading {...css.title}>PRODUCT PERFORMANCE</Heading>
             <Text {...css.text}>
-              The special composition of the core and our unique fusion process make ALSTAR™
+              The special composition of the core and our unique fusion process make ALSTAR
               composite panels so superior.
             </Text>
             <Link {...css.link} href="/">

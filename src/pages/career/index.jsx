@@ -28,7 +28,7 @@ function Career() {
         <Footer />
       </footer>
       <Link className="position-link" href={'/alstar-product/19cd21bb-10e4-4908-b170-fe9805cc4991'}>
-        ALSTAR™ A2
+        ALSTAR A2
       </Link>
     </>
   );

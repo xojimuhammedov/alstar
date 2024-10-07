@@ -7,9 +7,6 @@ function Form() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <Text {...css.text}>
-          Would you like support? We will be happy to advise you. Please select your request.
-        </Text>
         <form action="">
           <SimpleGrid columns={3} gap="24px">
             <label className="form-label" htmlFor="">
@@ -57,12 +54,6 @@ function Form() {
 export default Form;
 
 const css = {
-  text: {
-    fontSize: '16px',
-    lineHeight: '25px',
-    color: '#111',
-    marginBottom: '16px'
-  },
   input: {
     padding: '8px 12px',
     outline: 'none'

@@ -1,14 +1,16 @@
 import { Box, Heading, Image } from '@chakra-ui/react';
 import React from 'react';
 import BannerOne from '@/assets/banner1.webp';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box position={'relative'}>
       <Image {...css.image} src={BannerOne.src} alt="BannerOne" />
       <Box className="container">
         <Box {...css.box}>
-          <Heading {...css.title}>Inspirations</Heading>
+          <Heading {...css.title}>{t('nav6')}</Heading>
         </Box>
       </Box>
     </Box>
@@ -25,7 +27,7 @@ const css = {
     lineHeight: '40px',
     fontWeight: '200',
     color: '#111',
-    textTransform: 'uppercase',
+    textTransform: 'uppercase'
   },
   box: {
     position: 'absolute',

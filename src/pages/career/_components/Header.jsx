@@ -1,11 +1,13 @@
 import { Box, Heading } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box className="contact" {...css.header}>
       <Box className="container">
-        <Heading {...css.title}>Career</Heading>
+        <Heading {...css.title}>{t('nav2')}</Heading>
       </Box>
     </Box>
   );

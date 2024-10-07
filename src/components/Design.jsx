@@ -50,7 +50,7 @@ function Design() {
 
         <Flex mt="24px" justifyContent={'center'}>
           <Link href="/colour" {...css.link}>
-            Learn More
+            {t('Learn More')}
           </Link>
         </Flex>
       </Box>

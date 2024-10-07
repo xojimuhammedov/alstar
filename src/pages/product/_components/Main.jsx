@@ -7,9 +7,6 @@ function Main({ products }) {
   return (
     <Box className='main-products' p="36px 0">
       <Box className="container-mix">
-        {/* <Heading {...css.title}>
-          Why ALSTAR™ aluminium composite panels are the ideal choice for your façade project.
-        </Heading> */}
         <Text
           {...css.text}
           dangerouslySetInnerHTML={{

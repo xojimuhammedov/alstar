@@ -12,8 +12,10 @@ import { Navigation, Pagination } from 'swiper/modules';
 import CarouselOne from '@/assets/slider1.jpg';
 import CarouselTwo from '@/assets/carousel-two.webp';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
 
 function Company() {
+  const { t } = useTranslation();
   return (
     <Box className="company" p={'50px 0'} bg={'#111'}>
       <Swiper
@@ -34,7 +36,7 @@ function Company() {
                 <Heading {...css.title}>Unlimited versatile façade design</Heading>
                 <Text {...css.text}>ALSTAR:First choice for demanding projects worldwide.</Text>
                 <Link href="/" {...css.link}>
-                  Learn More
+                  {t('Learn More')}
                 </Link>
               </Box>
               <Image {...css.image} src={CarouselOne.src} alt="Company" />
@@ -50,7 +52,7 @@ function Company() {
                   ALSTAR: Inexhaustible design possibilities and simple processing.
                 </Text>
                 <Link href="/" {...css.link}>
-                  Learn More
+                  {t('Learn More')}
                 </Link>
               </Box>
               <Image {...css.image} src={CarouselTwo.src} alt="Company" />

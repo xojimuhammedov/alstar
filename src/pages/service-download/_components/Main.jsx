@@ -26,7 +26,7 @@ function Main() {
               of seconds.
             </Text>
             <Link href="/downloads">
-              <Text {...css.link}>Learn More</Text>
+              <Text {...css.link}>{t('Learn More')}</Text>
             </Link>
           </Box>
           <Box>
@@ -42,7 +42,7 @@ function Main() {
               time.
             </Text>
             <Link href="/services">
-              <Text {...css.link}>Learn More</Text>
+              <Text {...css.link}>{t('Learn More')}</Text>
             </Link>
           </Box>
         </SimpleGrid>
@@ -88,7 +88,7 @@ const css = {
     transition: '0.3s all',
     borderRadius: '12px',
     width: '110px',
-    textAlign:"center",
+    textAlign: 'center',
 
     _hover: {
       background: '#C22329'

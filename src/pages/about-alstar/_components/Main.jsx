@@ -6,7 +6,7 @@ function Main() {
     <Box p={'36px 0'}>
       <Box className="container-mix">
         <Heading {...css.title}>
-        ALSTAR™ – the world`s first address for aluminium composite panels
+        ALSTAR – the world`s first address for aluminium composite panels
         </Heading>
         <Text {...css.text}>
           ALSTAR – a brand of Mitsubishi Chemical Group – the world`s first address for

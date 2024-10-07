@@ -1,14 +1,16 @@
 import { Box, Heading, Image } from '@chakra-ui/react';
 import React from 'react';
 import BannerOne from '@/assets/news-banner.webp';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box position={'relative'}>
       <Image {...css.image} src={BannerOne.src} alt="BannerOne" />
       <Box className="container">
         <Box {...css.box}>
-          <Heading {...css.title}>News</Heading>
+          <Heading {...css.title}>{t('nav9')}</Heading>
         </Box>
       </Box>
     </Box>

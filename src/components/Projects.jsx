@@ -16,11 +16,13 @@ import ImageThree from '@/assets/image3.jpg';
 import ImageFour from '@/assets/image4.jpg';
 import ImageFive from '@/assets/image5.jpg';
 import ImageSix from '@/assets/image6.jpg';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const { t } = useTranslation();
   return (
     <Box p={'36px 0'}>
-      <Heading {...css.title}>All over the country: Our References</Heading>
+      <Heading {...css.title}>{t('All over the country: Our References')}</Heading>
       <Swiper
         modules={[Navigation]}
         navigation={{
@@ -41,23 +43,13 @@ function Projects() {
           <Image {...css.image} src={ImageThree.src} alt="CarouselOne" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image
-            {...css.image}
-            src={ImageFour.src
-            }
-            alt="CarouselOne"
-          />
+          <Image {...css.image} src={ImageFour.src} alt="CarouselOne" />
         </SwiperSlide>
         <SwiperSlide>
           <Image {...css.image} src={ImageSix.src} alt="CarouselOne" />
         </SwiperSlide>
         <SwiperSlide>
-          <Image
-            src={ImageFive.src
-            }
-            alt="CarouselOne"
-            {...css.image}
-          />
+          <Image src={ImageFive.src} alt="CarouselOne" {...css.image} />
         </SwiperSlide>
         <div className="button-next-slide swiper-right next-button">
           <ChevronRightIcon fontSize={'34px'} />

@@ -90,7 +90,7 @@ export default Navbar;
 
 const css = {
   icon: {
-    width: '200px'
+    width: '250px'
   },
   nav: {
     padding: '24px 0'

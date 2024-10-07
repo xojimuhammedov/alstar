@@ -1,12 +1,14 @@
 import { Box, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const {t} = useTranslation()
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
         <Heading {...css.title}>
-          Boost your performance with ALSTAR™: discover the benefits!
+          {t('Boost your performance with ALSTAR: discover the benefits!')}
         </Heading>
         <SimpleGrid mt={'24px'} gap="24px" columns={3}>
           <Box width={'100%'}>
@@ -18,7 +20,7 @@ function Projects() {
             <Heading {...css.name}>Product Performance</Heading>
             <Text {...css.text}>
               The special composition of the core material in combination with our unique fusion
-              process makes ALSTAR™ composite panels so superior.
+              process makes ALSTAR composite panels so superior.
             </Text>
           </Box>
           <Box width={'100%'}>
@@ -41,7 +43,7 @@ function Projects() {
             />
             <Heading {...css.name}>Installation Performance</Heading>
             <Text {...css.text}>
-              With ALSTAR™ you save up to 50 % on the substructure and installation time without
+              With ALSTAR you save up to 50 % on the substructure and installation time without
               compromising the stability of the façade!
             </Text>
           </Box>

@@ -1,7 +1,9 @@
 import { Box, Heading, Image, Link, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Section() {
+  const { t } = useTranslation();
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
@@ -12,12 +14,12 @@ function Section() {
               alt="Project One"
               src="https://www.alpolic.eu/uploads/media/filter-540px/07/37-_Kachel_projekte_750x400.webp?v=2-0"
             />
-            <Heading {...css.title}>Projects</Heading>
+            <Heading {...css.title}>{t('Projects')}</Heading>
             <Text {...css.text}>
-              Embark on a journey around the globe and discover the variety of ALSTAR.
+              {t("Embark on a journey around the globe and discover the variety of ALSTAR.")}
             </Text>
             <Link href="/projects-list" {...css.link}>
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
           <Box>
@@ -26,13 +28,12 @@ function Section() {
               alt="Project One"
               src="https://www.alpolic.eu/uploads/media/filter-540px/02/52-kachel_international_750x400.webp?v=2-0"
             />
-            <Heading {...css.title}>Project-Highlights</Heading>
+            <Heading {...css.title}>{t('nav6')}</Heading>
             <Text {...css.text}>
-              Discover architectural highlights that captivate with extraordinary colours, shapes or
-              finishes.
+             {t("Discover architectural highlights that captivate with extraordinary colours, shapes or finishes.")}
             </Text>
             <Link href="/projects-hight" {...css.link}>
-              Learn More
+              {t('Learn More')}
             </Link>
           </Box>
         </SimpleGrid>

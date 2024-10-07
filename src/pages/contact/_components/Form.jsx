@@ -9,19 +9,14 @@ function Form() {
       <Box className="container-mix">
         <Heading {...css.title}>{t('Here you get all our attention')}</Heading>
         <Text {...css.text}>
-          Would you like more information about ALSTAR? Then write to us. Please fill in the contact
-          form below and send it to us. Our experts will take care of your request as soon as
-          possible and will be happy to answer your questions. Here you get all our attention.
+          {t("contactText")}
         </Text>
 
         <Text m={'24px 0'} {...css.text}>
           {t('Do you have any questions or suggestions?')}
         </Text>
         <Text mb={'24px'} {...css.text}>
-          We will be happy to help you. Use our contact form and send us your inquiry. You will
-          receive an answer from us as soon as possible. Choose from the following options the way
-          you would like to receive information from us - completely according to your individual
-          wishes.
+        {t("contactText1")}
         </Text>
 
         <form action="">
