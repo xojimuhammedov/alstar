@@ -3,6 +3,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ImageFour from '@/assets/image2.jpg';
 
+import ImageThree from '@/assets/image1.jpg';
+
 function Section() {
   const { t } = useTranslation();
   return (
@@ -13,7 +15,7 @@ function Section() {
             <Image
               {...css.image}
               alt="Project One"
-              src="https://www.alpolic.eu/uploads/media/filter-540px/07/37-_Kachel_projekte_750x400.webp?v=2-0"
+              src={ImageThree.src}
             />
             <Heading {...css.title}>{t('Projects')}</Heading>
             <Text {...css.text}>

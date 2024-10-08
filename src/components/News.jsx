@@ -11,31 +11,33 @@ function News() {
       <Box className="container-mix">
         <Heading {...css.title}>{t('News: Current news and articles')}</Heading>
         <Flex {...css.card}>
-          <Image {...css.image} src={NewsImage.src} alt="NewsImage" />
+          <Image
+            {...css.image}
+            src={
+              'https://www.alpolic.eu/uploads/media/filter-540px/08/648-kachel_webnews_750x400_neu_6.webp?v=2-0'
+            }
+            alt="NewsImage"
+          />
           <Box p="16px">
-            <Heading {...css.name}>
-              12 years of ALSTAR: Successful for 50 years with innovation and know-how
-            </Heading>
-            <Text {...css.text}>
-              We are celebrating our 50th anniversary: with numerous innovations, we have had a
-              significant influence on trends in the international façade market since 1972.
-            </Text>
-            <Link href="/" {...css.link}>
+            <Heading {...css.name}>{t('news-list.name')}</Heading>
+            <Text {...css.text}>{t('news-list.text')}</Text>
+            <Link href="/news-list" {...css.link}>
               {t('Learn More')}
             </Link>
           </Box>
         </Flex>
         <Flex {...css.card}>
-          <Image {...css.image} src={NewsImage.src} alt="NewsImage" />
+          <Image
+            {...css.image}
+            src={
+              'https://www.alpolic.eu/uploads/media/filter-540px/01/411-kachel_fairs_750x400.webp?v=2-0'
+            }
+            alt="NewsImage"
+          />
           <Box p="16px">
-            <Heading {...css.name}>
-              12 years of ALSTAR: Successful for 50 years with innovation and know-how
-            </Heading>
-            <Text {...css.text}>
-              We are celebrating our 50th anniversary: with numerous innovations, we have had a
-              significant influence on trends in the international façade market since 1972.
-            </Text>
-            <Link href="/" {...css.link}>
+            <Heading {...css.name}>{t('news-events.name')}</Heading>
+            <Text {...css.text}>{t('news-events.text')}</Text>
+            <Link href="/news-events" {...css.link}>
               {t('Learn More')}
             </Link>
           </Box>

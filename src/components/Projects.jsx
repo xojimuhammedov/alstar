@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-import CarouselOne from '@/assets/slider1.jpg';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { Navigation } from 'swiper/modules';
 

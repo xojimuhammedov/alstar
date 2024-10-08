@@ -51,6 +51,7 @@ const css = {
     fontSize: { base: '20px', lg: '35px' },
     lineHeight: '40px',
     letterSpacing: '0.5px',
+    fontWeight: 400,
     width: { base: '100%', lg: '700px', xl: '800px' },
     borderRadius: '6px'
   },
@@ -60,9 +61,8 @@ const css = {
     width: { base: '100%', lg: '700px', xl: '800px' },
     padding: '10px 15px',
     margin: '15px 0',
-    fontSize: { base: '14px', lg: '18px' },
+    fontSize: { base: '14px', lg: '16px' },
     lineHeight: { base: '20px', lg: '28px' },
-    letterSpacing: '0.6px',
     borderRadius: '6px'
   },
   image: {
@@ -75,8 +75,8 @@ const css = {
     fontSize: { base: '25px', lg: '35px' },
     lineHeight: { base: '30px', lg: '40px' },
     letterSpacing: '0.5px',
-    color: '#2E3A6B',
-    fontWeight: 600,
+    color: '#111',
+    fontWeight: 400,
     marginBottom: '20px',
     textAlign: { base: 'center', lg: 'none' },
     marginTop: { base: '20px', lg: 0 }
@@ -85,7 +85,8 @@ const css = {
     fontSize: '16px',
     lineHeight: '28px',
     letterSpacing: '0.6px',
-    fontWeight: 500,
+    color: '#5F5E5E',
+    fontWeight: 400,
     width: { base: '100%', lg: '700px' }
   }
 };
