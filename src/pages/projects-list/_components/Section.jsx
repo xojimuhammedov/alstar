@@ -40,7 +40,8 @@ const css = {
     maxWidth: '100%',
     minWidth: '100%',
     width: '100%',
-    height: '180px'
+    height: '180px',
+    objectFit: 'cover'
   },
   name: {
     fontSize: '16px',
