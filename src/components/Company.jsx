@@ -33,8 +33,8 @@ function Company() {
           <Box className="container">
             <Flex justifyContent={'space-between'}>
               <Box pt={'36px'}>
-                <Heading {...css.title}>Unlimited versatile façade design</Heading>
-                <Text {...css.text}>ALSTAR:First choice for demanding projects worldwide.</Text>
+                <Heading {...css.title}>{t("Unlimited versatile façade design")}</Heading>
+                <Text {...css.text}>{t("ALSTAR:First choice for demanding projects worldwide.")}</Text>
                 <Link href="/" {...css.link}>
                   {t('Learn More')}
                 </Link>
@@ -47,9 +47,9 @@ function Company() {
           <Box className="container">
             <Flex pb={'36px'} justifyContent={'space-between'}>
               <Box pt={'48px'}>
-                <Heading {...css.title}>From idea to form</Heading>
+                <Heading {...css.title}>{t("From idea to form")}</Heading>
                 <Text {...css.text}>
-                  ALSTAR: Inexhaustible design possibilities and simple processing.
+                  {t("ALSTAR: Inexhaustible design possibilities and simple processing.")}
                 </Text>
                 <Link href="/" {...css.link}>
                   {t('Learn More')}
