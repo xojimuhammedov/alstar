@@ -132,3 +132,18 @@ body {
   font-weight: 400 !important;
   text-transform: uppercase;
 }
+
+.about-image-one {
+  background-image: url('../assets/company.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 800px;
+}
+
+.about-image-two {
+  background-image: url('../assets/dibond1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 800px;
+  margin-bottom: 30px;
+}

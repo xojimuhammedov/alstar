@@ -23,12 +23,12 @@ function AboutAlstar() {
         <header>
           <Header />
         </header>
-        <main>
+        {/* <main>
           <Main />
         </main>
         <section>
           <Partnership />
-        </section>
+        </section> */}
         <footer>
           <Footer />
         </footer>
