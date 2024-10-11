@@ -65,28 +65,6 @@ function Navbar() {
                 ))}
               </div>
             </div>
-            {/* <Menu isLazy>
-              <MenuButton {...css.link}>{t('nav4')}</MenuButton>
-              <MenuList {...css.menuItem} zIndex={'999'}>
-                {projects?.map((item, index) => (
-                  <MenuItem textTransform={'uppercase'} key={index}>
-                    <Link href={`/product/${item?.id}`}>{item[`name_${i18n?.language}`]}</Link>
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu> */}
-            {/* <Menu isLazy>
-              <MenuButton {...css.link}>{t('nav5')}</MenuButton>
-              <MenuList {...css.menuItem} zIndex={'999'}>
-                {products?.map((item, index) => (
-                  <MenuItem key={index}>
-                    <Link href={`/alstar-product/${item?.id}`}>
-                      {item[`name_${i18n?.language}`]}
-                    </Link>
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu> */}
             <div className="dropdown">
               <Text className="dropbtn" {...css.link}>
                 {t('nav5')}
