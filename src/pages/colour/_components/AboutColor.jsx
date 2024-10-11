@@ -38,7 +38,6 @@ function AboutColor({ isOpen, onClose, colorId }) {
     setCopy(true);
   };
 
-  console.log(color)
   return (
     <Modal isOpen={isOpen} isCentered onClose={onClose}>
       <ModalOverlay />
@@ -53,12 +52,12 @@ function AboutColor({ isOpen, onClose, colorId }) {
           <Text {...css.text}>Colour: {color?.[`name_${i18n?.language}`]}</Text>
         </ModalBody>
         <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
+          <Button {...css.button} mr={3} onClick={onClose}>
             Close
           </Button>
           <Button
             onClick={copyUrlToClipboard}
-            colorScheme="pink"
+            {...css.button}
             leftIcon={<LinkIcon />}
             variant="solid"
           >
@@ -85,5 +84,14 @@ const css = {
     lineHeight: "28px",
     fontWeight: "400",
     marginTop: "16px",
+  },
+  button: {
+    background: "#111",
+    color: "#fff",
+
+    _hover: {
+      background: "#111",
+      color: "#fff",
+    },
   },
 };
