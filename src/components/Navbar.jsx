@@ -16,10 +16,10 @@ function Navbar() {
     axios
       .get(`${BASE_URL}/products`)
       .then((res) => {
-        const responseData = res?.data?.data
-        const firstElement = res?.data?.data?.splice(0, 1); 
-        responseData.push(firstElement[0])
-        setProducts(responseData)
+        const responseData = res?.data?.data;
+        const firstElement = res?.data?.data?.splice(0, 1);
+        responseData.push(firstElement[0]);
+        setProducts(responseData);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -28,8 +28,8 @@ function Navbar() {
     axios
       .get(`${BASE_URL}/projects`)
       .then((res) => {
-        const responseDataOne = res?.data?.data
-        setProjects(responseDataOne)
+        const responseDataOne = res?.data?.data;
+        setProjects(responseDataOne);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -53,7 +53,19 @@ function Navbar() {
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
           </Link>
           <Flex {...css.item}>
-            <Menu isLazy>
+            <div className="dropdown">
+              <Text className="dropbtn" {...css.link}>
+                {t('nav4')}
+              </Text>
+              <div className="dropdown-content">
+                {projects?.map((item, index) => (
+                  <Link key={index} href={`/product/${item?.id}`}>
+                    {item[`name_${i18n?.language}`]}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            {/* <Menu isLazy>
               <MenuButton {...css.link}>{t('nav4')}</MenuButton>
               <MenuList {...css.menuItem} zIndex={'999'}>
                 {projects?.map((item, index) => (
@@ -62,8 +74,8 @@ function Navbar() {
                   </MenuItem>
                 ))}
               </MenuList>
-            </Menu>
-            <Menu isLazy>
+            </Menu> */}
+            {/* <Menu isLazy>
               <MenuButton {...css.link}>{t('nav5')}</MenuButton>
               <MenuList {...css.menuItem} zIndex={'999'}>
                 {products?.map((item, index) => (
@@ -74,7 +86,19 @@ function Navbar() {
                   </MenuItem>
                 ))}
               </MenuList>
-            </Menu>
+            </Menu> */}
+            <div className="dropdown">
+              <Text className="dropbtn" {...css.link}>
+                {t('nav5')}
+              </Text>
+              <div className="dropdown-content dropdown-menu">
+                {products?.map((item, index) => (
+                  <Link key={index} href={`/alstar-product/${item?.id}`}>
+                    {item[`name_${i18n?.language}`]}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link href="/inspirations">
               <Text {...css.link}>{t('nav6')}</Text>
             </Link>
@@ -82,10 +106,10 @@ function Navbar() {
               <Text {...css.link}>{t('nav7')}</Text>
             </Link>
             <Link href="/service-download">
-              <Text {...css.link}>{t("nav8")}</Text>
+              <Text {...css.link}>{t('nav8')}</Text>
             </Link>
             <Link href="/news">
-              <Text {...css.link}>{t("nav9")}</Text>
+              <Text {...css.link}>{t('nav9')}</Text>
             </Link>
           </Flex>
         </Flex>
