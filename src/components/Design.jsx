@@ -1,51 +1,33 @@
 import { Box, Flex, Heading, Image, Link, SimpleGrid, Text } from '@chakra-ui/react';
-import React from 'react';
-
-import DesignImage from '@/assets/design.webp';
+import React, { useEffect, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
+import { BASE_URL, FILE_URL } from '@/api';
+import axios from 'axios';
 function Design() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [color, setColor] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/colours?limit=1000`)
+      .then((res) => {
+        setColor(res?.data?.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
         <Heading {...css.title}>{t('color.name')}</Heading>
         <Text {...css.text}>{t('color.text')}</Text>
         <SimpleGrid gap={'24px'} columns={4}>
-          <Box>
-            <Image {...css.image} src={DesignImage.src} alt="DesignImage" />
-            <Heading {...css.name}>Uni colours</Heading>
-          </Box>
-          <Box>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/filter-540px/04/294-structur_walnut_750x400.webp?v=2-0'
-              }
-              alt="DesignImage"
-            />
-            <Heading {...css.name}>Design Pattern</Heading>
-          </Box>
-          <Box>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/filter-540px/03/253-farbe_realanodised_750x400.webp?v=2-0'
-              }
-              alt="DesignImage"
-            />
-            <Heading {...css.name}>Metallic</Heading>
-          </Box>
-          <Box>
-            <Image
-              {...css.image}
-              src={
-                'https://www.alpolic.eu/uploads/media/filter-540px/03/293-prismatic_topaz_750x400.webp?v=2-0'
-              }
-              alt="DesignImage"
-            />
-            <Heading {...css.name}>Prismatic</Heading>
-          </Box>
+          {color?.slice(5, 9)?.map((item, index) => (
+            <Box key={index}>
+              <Image {...css.image} src={`${FILE_URL}/files/${item?.image}`} alt="DesignImage" />
+              <Heading {...css.name}>{item[`name_${i18n?.language}`]}</Heading>
+            </Box>
+          ))}
         </SimpleGrid>
 
         <Flex mt="24px" justifyContent={'center'}>
