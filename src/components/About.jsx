@@ -23,8 +23,14 @@ export default About;
 
 const css = {
   title: {
-    fontSize: '34px',
-    lineHeight: '39px',
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '400',
     color: '#111',
     textAlign: 'center',

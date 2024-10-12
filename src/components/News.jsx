@@ -51,8 +51,14 @@ export default News;
 
 const css = {
   title: {
-    fontSize: '34px',
-    lineHeight: '39px',
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '400',
     color: '#111',
     textAlign: 'center',
@@ -60,15 +66,28 @@ const css = {
   },
   card: {
     boxShadow: 'rgba(144, 173, 248, 0.25) 0px 9px 18px 0px',
-    height: '200px',
+    height: {
+      base:"450px",
+      md:'200px'
+    },
     gap: '16px',
     borderRadius: '12px',
-    margin: '24px 0'
+    margin: '24px 0',
+    flexDirection:{
+      base:"column",
+      md:"row"
+    }
   },
   image: {
     width: '100%',
-    maxWidth: '350px',
-    minWidth: '350px',
+    maxWidth: {
+      base: '100%',
+      md: '350px'
+    },
+    minWidth: {
+      base: '100%',
+      md: '350px'
+    },
     height: '100%',
     objectFit: 'cover',
     borderRadius: '12px 0 0 12px'
@@ -76,15 +95,21 @@ const css = {
   name: {
     fontWeight: '400',
     color: '#111',
-    fontSize: '25px',
+    fontSize: {
+      base: '18px',
+      md: '25px'
+    },
     lineHeight: '30px',
     marginBottom: '12px'
   },
   text: {
-    fontSize: '16px',
+    fontSize: {
+      base:"14px",
+      md:'16px'
+    },
     lineHeight: '25px',
     color: '#111',
-    marginBottom: '12px'
+    marginBottom: '12px',
   },
   link: {
     backgroundColor: '#111',

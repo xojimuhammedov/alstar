@@ -17,7 +17,10 @@ export default Header;
 
 const css = {
   header: {
-    height: '180px'
+    height: {
+      base:"250px",
+      md:'180px'
+    }
   },
   title: {
     fontSize: '35px',

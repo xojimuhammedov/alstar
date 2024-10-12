@@ -31,10 +31,15 @@ function Company() {
         className="mySwiper">
         <SwiperSlide>
           <Box className="container">
-            <Flex justifyContent={'space-between'}>
+            <Flex
+              flexDirection={{ base: 'column', md: 'row' }}
+              gap={'24px'}
+              justifyContent={'space-between'}>
               <Box pt={'36px'}>
-                <Heading {...css.title}>{t("Unlimited versatile façade design")}</Heading>
-                <Text {...css.text}>{t("ALSTAR:First choice for demanding projects worldwide.")}</Text>
+                <Heading {...css.title}>{t('Unlimited versatile façade design')}</Heading>
+                <Text {...css.text}>
+                  {t('ALSTAR:First choice for demanding projects worldwide.')}
+                </Text>
                 <Link href="/" {...css.link}>
                   {t('Learn More')}
                 </Link>
@@ -45,11 +50,15 @@ function Company() {
         </SwiperSlide>
         <SwiperSlide>
           <Box className="container">
-            <Flex pb={'36px'} justifyContent={'space-between'}>
+            <Flex
+              flexDirection={{ base: 'column', md: 'row' }}
+              gap={'24px'}
+              pb={'36px'}
+              justifyContent={'space-between'}>
               <Box pt={'48px'}>
-                <Heading {...css.title}>{t("From idea to form")}</Heading>
+                <Heading {...css.title}>{t('From idea to form')}</Heading>
                 <Text {...css.text}>
-                  {t("ALSTAR: Inexhaustible design possibilities and simple processing.")}
+                  {t('ALSTAR: Inexhaustible design possibilities and simple processing.')}
                 </Text>
                 <Link href="/" {...css.link}>
                   {t('Learn More')}
@@ -93,8 +102,14 @@ const css = {
     objectFit: 'cover'
   },
   title: {
-    fontSize: '35px',
-    lineHeight: '40px',
+    fontSize: {
+      base: '25px',
+      md: '35px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '40px'
+    },
     fontWeight: '200',
     marginBottom: '12px',
     color: '#fff'

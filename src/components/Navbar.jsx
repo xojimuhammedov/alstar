@@ -100,7 +100,10 @@ export default Navbar;
 
 const css = {
   icon: {
-    width: '250px'
+    width: {
+      base: '180px',
+      md: '250px'
+    }
   },
   nav: {
     padding: '24px 0'
@@ -120,6 +123,10 @@ const css = {
     textTransform: 'uppercase',
     fontWeight: '400',
     transition: '0.3s',
+    display: {
+      base: 'none',
+      md: 'block'
+    },
 
     _hover: {
       color: '#EE1818'
@@ -138,6 +145,10 @@ const css = {
     textTransform: 'uppercase',
     fontWeight: '500',
     transition: '0.3s',
+    display: {
+      base: 'none',
+      md: 'block'
+    },
 
     _hover: {
       color: '#EE1818'

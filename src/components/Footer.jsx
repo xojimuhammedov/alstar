@@ -13,7 +13,7 @@ function Footer() {
   return (
     <Box {...css.footer}>
       <Box className="container-mix">
-        <Flex justifyContent={'space-between'}>
+        <Flex flexWrap={{base:"wrap", xl:"no-wrap"}} gap={{base:"24px", xl:"0"}} justifyContent={'space-between'}>
           <Box>
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
             <Text {...css.text}>

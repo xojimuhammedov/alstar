@@ -57,7 +57,7 @@ function Section() {
       <Box className="container-mix">
         <Heading {...css.title}>{t("Colour Collections")}</Heading>
         <Accordion {...css.accordion} allowMultiple>
-          <AccordionItem border={'0'}>
+          <AccordionItem border={"0"}>
             <h2>
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left">
@@ -79,7 +79,11 @@ function Section() {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-        <SimpleGrid mt={"24px"} gap={"24px"} columns={4}>
+        <SimpleGrid
+          mt={"24px"}
+          gap={"24px"}
+          columns={{ base: 1, sm: 2, md: 3, xl: 4 }}
+        >
           {value ? (
             <>
               {filterData?.map((item, index) => (
@@ -151,6 +155,9 @@ const css = {
   },
   accordion: {
     border: "2px solid #111",
-    width: "400px",
+    width: {
+      base: "100%",
+      sm: "400px",
+    },
   },
 };

@@ -21,7 +21,7 @@ function Design() {
       <Box className="container-mix">
         <Heading {...css.title}>{t('color.name')}</Heading>
         <Text {...css.text}>{t('color.text')}</Text>
-        <SimpleGrid gap={'24px'} columns={4}>
+        <SimpleGrid gap={'24px'} columns={{ base: 1, sm: 2, md: 3, xl: 4 }}>
           {color?.slice(5, 9)?.map((item, index) => (
             <Box key={index}>
               <Image {...css.image} src={`${FILE_URL}/files/${item?.image}`} alt="DesignImage" />
@@ -44,8 +44,14 @@ export default Design;
 
 const css = {
   title: {
-    fontSize: '34px',
-    lineHeight: '39px',
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '400',
     color: '#111',
     textAlign: 'center',

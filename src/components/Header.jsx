@@ -77,19 +77,42 @@ const css = {
   image: {
     width: '100%',
     maxWidth: '100%',
-    minWidth: '100%'
+    minWidth: '100%',
+    height:{
+      base:"250px",
+      md:"100%"
+    },
+    objectFit:"cover"
   },
   box: {
     position: 'absolute',
-    top: '130px',
-    left: '70px',
-    width: '40%'
+    top: {
+      base:"75px",
+      md:'130px'
+    },
+    left: {
+      base:"15px",
+      md:'70px'
+    },
+    width:{
+      base:"100%",
+      md:'40%'
+    }
   },
   title: {
-    fontSize: '30px',
-    lineHeight: '35px',
+    fontSize: {
+      base:"25px",
+      md:'30px'
+    },
+    lineHeight: {
+      base:"30px",
+      md:'35px'
+    },
     fontWeight: '200',
-    width: '400px',
+    width: {
+      base:"100%",
+      md:'400px'
+    },
     marginBottom: '24px',
     color: '#111'
   },
