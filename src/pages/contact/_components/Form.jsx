@@ -8,19 +8,17 @@ function Form() {
     <Box {...css.form}>
       <Box className="container-mix">
         <Heading {...css.title}>{t('Here you get all our attention')}</Heading>
-        <Text {...css.text}>
-          {t("contactText")}
-        </Text>
+        <Text {...css.text}>{t('contactText')}</Text>
 
         <Text m={'24px 0'} {...css.text}>
           {t('Do you have any questions or suggestions?')}
         </Text>
         <Text mb={'24px'} {...css.text}>
-        {t("contactText1")}
+          {t('contactText1')}
         </Text>
 
         <form action="">
-          <SimpleGrid columns={3} gap="24px">
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap="24px">
             <label className="form-label" htmlFor="">
               {t('First name*')}
               <Input {...css.input} type="text" />

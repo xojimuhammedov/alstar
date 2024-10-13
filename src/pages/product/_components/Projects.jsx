@@ -13,8 +13,8 @@ function Projects() {
     axios
       .get(`${BASE_URL}/projects`)
       .then((res) => {
-        const responseDataOne = res?.data?.data
-        setProjects(responseDataOne)
+        const responseDataOne = res?.data?.data;
+        setProjects(responseDataOne);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -24,27 +24,20 @@ function Projects() {
         <Heading {...css.title}>
           {t('Boost your performance with ALSTAR: discover the benefits!')}
         </Heading>
-        <SimpleGrid mt={'24px'} gap="24px" columns={3}>
-           {
-            projects?.map((item,index) => (
-              <Box key={index} width={'100%'}>
-            <Image
-              alt="Project"
-              {...css.image}
-              src={`${FILE_URL}/files/${item?.image}`}
-            />
-            <Heading {...css.name}>{item[`name_${i18n?.language}`]}</Heading>
-            <Link href={`/product/${item?.id}`} {...css.link}>
-              {t('Learn More')}
-            </Link>
-            {/* <Text {...css.text}>
+        <SimpleGrid mt={'24px'} gap="24px" columns={{ base: 1, md: 2, lg: 3 }}>
+          {projects?.map((item, index) => (
+            <Box key={index} width={'100%'}>
+              <Image alt="Project" {...css.image} src={`${FILE_URL}/files/${item?.image}`} />
+              <Heading {...css.name}>{item[`name_${i18n?.language}`]}</Heading>
+              <Link href={`/product/${item?.id}`} {...css.link}>
+                {t('Learn More')}
+              </Link>
+              {/* <Text {...css.text}>
               The special composition of the core material in combination with our unique fusion
               process makes ALSTAR composite panels so superior.
             </Text> */}
-          </Box>
-            ))
-           }
-        
+            </Box>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>
@@ -58,12 +51,18 @@ const css = {
     width: '100%',
     maxWidth: '100%',
     minWidth: '100%',
-    height:"210px",
-    objectFit:"cover"
+    height: '210px',
+    objectFit: 'cover'
   },
   title: {
-    fontSize: '32px',
-    lineHeight: '40px',
+    fontSize: {
+      base: '25px',
+      md: '32px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '400',
     color: '#111'
   },
@@ -72,7 +71,7 @@ const css = {
     lineHeight: '30px',
     fontWeight: '400',
     color: '#111',
-    margin:"16px 0"
+    margin: '16px 0'
   },
   text: {
     fontSize: '16px',

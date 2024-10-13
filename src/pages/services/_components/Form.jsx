@@ -8,7 +8,7 @@ function Form() {
     <Box p={'36px 0'}>
       <Box className="container-mix">
         <form action="">
-          <SimpleGrid columns={3} gap="24px">
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap="24px">
             <label className="form-label" htmlFor="">
               {t('First name*')}
               <Input {...css.input} type="text" />

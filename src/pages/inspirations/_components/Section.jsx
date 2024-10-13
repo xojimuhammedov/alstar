@@ -10,13 +10,9 @@ function Section() {
   return (
     <Box p={'36px 0'}>
       <Box className="container-mix">
-        <SimpleGrid gap={'36px'} columns={2}>
+        <SimpleGrid gap={'36px'} columns={{ base: 1, md: 2 }}>
           <Box>
-            <Image
-              {...css.image}
-              alt="Project One"
-              src={ImageThree.src}
-            />
+            <Image {...css.image} alt="Project One" src={ImageThree.src} />
             <Heading {...css.title}>{t('Projects')}</Heading>
             <Text {...css.text}>
               {t('Embark on a journey around the globe and discover the variety of ALSTAR.')}

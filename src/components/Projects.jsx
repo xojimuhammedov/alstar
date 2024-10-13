@@ -30,6 +30,20 @@ function Projects() {
         }}
         loop
         watchSlidesProgress={true}
+        breakpoints={{
+          350: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
         slidesPerView={3}
         className="mySwiper">
         <SwiperSlide>

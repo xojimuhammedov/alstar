@@ -169,7 +169,7 @@ body {
   z-index: 9999;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   min-width: 120px !important;
 }
 
@@ -187,4 +187,21 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    background-size: cover;
+  }
+
+  .header-product {
+    background-size: cover;
+  }
+
+  .main-products p strong {
+    font-size: 22px;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    line-height: 30px;
+  }
 }

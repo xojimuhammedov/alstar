@@ -8,7 +8,11 @@ function Main() {
     <Box p={'36px 0'}>
       <Box className="container-mix">
         <Heading {...css.title}>{t('Unlimited façade design with ALSTAR™')}</Heading>
-        <Text {...css.text}>{t('The boundless variety of ALSTAR aluminium composite panels is also reflected in countless projects that have been realised worldwide. They are proof of the enormous bandwidth that ALSTAR makes possible in façade design. Get inspired.')}</Text>
+        <Text {...css.text}>
+          {t(
+            'The boundless variety of ALSTAR aluminium composite panels is also reflected in countless projects that have been realised worldwide. They are proof of the enormous bandwidth that ALSTAR makes possible in façade design. Get inspired.'
+          )}
+        </Text>
       </Box>
     </Box>
   );
@@ -18,8 +22,14 @@ export default Main;
 
 const css = {
   title: {
-    fontSize: '34px',
-    lineHeight: '39px',
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '200',
     color: '#111',
     marginBottom: '24px'

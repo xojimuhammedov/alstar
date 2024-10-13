@@ -106,7 +106,10 @@ const css = {
     }
   },
   nav: {
-    padding: '24px 0'
+    padding: {
+      base: '10px 0',
+      md: '24px 0'
+    }
   },
   list: {
     alignItems: 'center',

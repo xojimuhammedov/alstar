@@ -23,9 +23,18 @@ export default Header;
 const css = {
   title: {
     position: 'absolute',
-    left: '50px',
-    fontSize: '35px',
-    lineHeight: '40px',
+    left: {
+      base: '15px',
+      md: '50px'
+    },
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '200',
     color: '#111',
     textTransform: 'uppercase'
@@ -34,7 +43,10 @@ const css = {
     position: 'absolute',
     top: '50px',
     left: 0,
-    width: '45%',
+    width: {
+      base: '100%',
+      md: '45%'
+    },
     height: '100%'
   }
 };

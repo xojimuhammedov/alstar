@@ -20,7 +20,7 @@ function Section() {
   return (
     <Box p={'24px 0'}>
       <Box className="container-mix">
-        <SimpleGrid gap={'24px'} columns={3}>
+        <SimpleGrid gap={'24px'} columns={{ base: 1, md: 2, lg: 3 }}>
           {project?.map((item, index) => (
             <Box key={index}>
               <Image {...css.image} src={`${FILE_URL}/files/${item?.image}`} alt="DesignImage" />

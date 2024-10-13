@@ -2,7 +2,6 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-
 function Main() {
   const { t } = useTranslation();
   return (
@@ -19,8 +18,14 @@ export default Main;
 
 const css = {
   title: {
-    fontSize: '34px',
-    lineHeight: '39px',
+    fontSize: {
+      base: '25px',
+      md: '34px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '39px'
+    },
     fontWeight: '200',
     color: '#111',
     marginBottom: '24px'

@@ -10,7 +10,7 @@ function Header() {
       <Image {...css.image} src={BannerOne.src} alt="BannerOne" />
       <Box className="container">
         <Box {...css.box}>
-          <Heading {...css.title}>{t("nav8")}</Heading>
+          <Heading {...css.title}>{t('nav8')}</Heading>
         </Box>
       </Box>
     </Box>
@@ -22,9 +22,18 @@ export default Header;
 const css = {
   title: {
     position: 'absolute',
-    left: '50px',
-    fontSize: '35px',
-    lineHeight: '40px',
+    left: {
+      base: '20px',
+      md: '50px'
+    },
+    fontSize: {
+      base: '25px',
+      md: '35px'
+    },
+    lineHeight: {
+      base: '30px',
+      md: '40px'
+    },
     fontWeight: '200',
     color: '#111',
     textTransform: 'uppercase'
@@ -33,7 +42,10 @@ const css = {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '45%',
+    width: {
+      base: '100%',
+      md: '45%'
+    },
     height: '100%',
     background: 'linear-gradient(-60deg, transparent 140px, rgba(255,255,255,0.85) 0) bottom right',
     textAlign: 'left',
@@ -43,6 +55,7 @@ const css = {
     width: '100%',
     maxWidth: '100%',
     minWidth: '100%',
-    height: '200px'
+    height: '200px',
+    objectFit:"cover"
   }
 };
