@@ -6,6 +6,7 @@ import Language from './Language';
 import axios from 'axios';
 import { BASE_URL } from '@/api';
 import { useTranslation } from 'react-i18next';
+import NavModal from './NavModal';
 
 function Navbar() {
   const [products, setProducts] = useState();
@@ -52,6 +53,9 @@ function Navbar() {
           <Link href="/">
             <Image {...css.icon} src={AlstarIcon.src} alt="AlstarIcon" />
           </Link>
+          <Box display={{ base: 'block', lg: 'none' }}>
+            <NavModal />
+          </Box>
           <Flex {...css.item}>
             <div className="dropdown">
               <Text className="dropbtn" {...css.link}>
@@ -117,7 +121,11 @@ const css = {
   },
   item: {
     alignItems: 'center',
-    gap: '24px'
+    gap: '24px',
+    display: {
+      base: 'none',
+      md: 'flex'
+    }
   },
   link: {
     color: '#111',

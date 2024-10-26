@@ -1,6 +1,7 @@
-import { Box, Heading, SimpleGrid, Text, Image, Link } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text, Image, Link, Flex } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+// import FileAlstarOne from '@/assets/alstar1.pdf';
 
 function Main() {
   const { t } = useTranslation();
@@ -9,6 +10,12 @@ function Main() {
       <Box className="container-mix">
         <Heading {...css.title}>{t('download.name')}</Heading>
         <Text {...css.text}>{t('download.text')}</Text>
+        {/* <Flex justifyContent={'space-between'} align={'center'}>
+          <Heading {...css.name}>ALSTARPRO № 1</Heading>
+          <Link target="_blank" href="#">
+            {t('Download')}
+          </Link>
+        </Flex> */}
       </Box>
     </Box>
   );
@@ -42,9 +49,9 @@ const css = {
     minWidth: '100%'
   },
   name: {
-    fontSize: '25px',
+    fontSize: '22px',
     lineHeight: '30px',
-    fontWeight: '200',
+    fontWeight: '500',
     color: '#111',
     margin: '8px 0'
   },
