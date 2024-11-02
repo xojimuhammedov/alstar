@@ -1,3 +1,3 @@
-export const BASE_URL = 'https://v2.centurysilkroadtravel.uz/api';
+export const BASE_URL = 'https://test.al-muamalat.uz/api';
 
-export const FILE_URL = 'https://v2.centurysilkroadtravel.uz';
+export const FILE_URL = 'https://test.al-muamalat.uz';
