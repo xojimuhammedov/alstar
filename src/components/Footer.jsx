@@ -21,12 +21,7 @@ function Footer() {
             </Text>
           </Box>
           <Box {...css.list}>
-            <Link {...css.link} href="/">
-              {t('nav4')}
-            </Link>
-            <Link {...css.link} href="/">
-              {t('nav5')}
-            </Link>
+           
             <Link href="/inspirations">
               <Text {...css.link}>{t('nav6')}</Text>
             </Link>
@@ -36,7 +31,7 @@ function Footer() {
             <Link href="/service-download">
               <Text {...css.link}>{t('nav8')}</Text>
             </Link>
-            <Link href="/">
+            <Link href="/news">
               <Text {...css.link}>{t('nav9')}</Text>
             </Link>
           </Box>
@@ -54,16 +49,16 @@ function Footer() {
           <Box {...css.list}>
             <Heading {...css.title}>{t('Social Media')}</Heading>
             <Flex mt={'12px'} gap={'12px'}>
-              <Link href="https://www.instagram.com/alstar.uz">
+              <Link target='_blank' href="https://www.instagram.com/alstar.uz">
                 <Instagram width={'25px'} height={'25px'} />
               </Link>
-              <Link href="https://www.facebook.com/profile.php?id=61553429155300">
+              <Link target='_blank' href="https://www.facebook.com/profile.php?id=61553429155300">
                 <Facebook width={'25px'} height={'25px'} />
               </Link>
-              <Link href="https://t.me/AlstarDibond">
+              <Link target='_blank' href="https://t.me/AlstarDibond">
                 <Telegram width={'25px'} height={'25px'} />
               </Link>
-              <Link href="https://www.youtube.com/@uzbekistanalstar4978">
+              <Link target='_blank' href="https://www.youtube.com/@uzbekistanalstar4978">
                 <YouTube width={'25px'} height={'25px'} />
               </Link>
             </Flex>

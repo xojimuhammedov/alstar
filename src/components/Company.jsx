@@ -40,7 +40,7 @@ function Company() {
                 <Text {...css.text}>
                   {t('ALSTAR:First choice for demanding projects worldwide.')}
                 </Text>
-                <Link href="/" {...css.link}>
+                <Link href="/projects-list" {...css.link}>
                   {t('Learn More')}
                 </Link>
               </Box>
@@ -60,7 +60,7 @@ function Company() {
                 <Text {...css.text}>
                   {t('ALSTAR: Inexhaustible design possibilities and simple processing.')}
                 </Text>
-                <Link href="/" {...css.link}>
+                <Link href="/projects-hight" {...css.link}>
                   {t('Learn More')}
                 </Link>
               </Box>

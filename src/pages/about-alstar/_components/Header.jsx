@@ -21,7 +21,7 @@ function Header() {
           </Flex>
         </Box>
       </Box>
-      <Box {...css.box} className="about-image-one">
+      {/* <Box {...css.box} className="about-image-one">
         <Box className="container">
           <Heading {...css.title}>{t('hello31')}</Heading>
           <Text {...css.text}>{t('hello32')}</Text>
@@ -32,7 +32,7 @@ function Header() {
           <Heading {...css.title}>{t('hello33')}</Heading>
           <Text {...css.text}>{t('hello34')}</Text>
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 }
@@ -78,7 +78,6 @@ const css = {
     color: '#111',
     fontWeight: 400,
     marginBottom: '20px',
-    textAlign: { base: 'center', lg: 'none' },
     marginTop: { base: '20px', lg: 0 }
   },
   text1: {
