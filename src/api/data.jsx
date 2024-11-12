@@ -2,6 +2,11 @@ import AlstarProImage from '@/assets/alstarpro.jpg';
 import AlstarNewsImage from '@/assets/alstar-news.jpg';
 import AlstarNewsImage2 from '@/assets/alstar-news2.jpg';
 
+import SertifikatOne from '@/assets/sertifikat.jpg';
+import SertifikatTwo from '@/assets/sertifikat-1.jpg';
+import SertifikatThree from '@/assets/sertifikat-2.jpg';
+import SertifikatFour from '@/assets/sertifikat-3.jpg';
+
 export const newsData = [
   {
     id: 1,
@@ -39,5 +44,24 @@ export const newsData = [
     text_ru:
       'Уведомляем вас об открытии нашего оффициального шоурума в Самарканде, здесь вы можете ощутить качество и надежность наших АКП Адрес: г.Самарканд ул.Рудаки д.227.',
     image: AlstarNewsImage2
+  }
+];
+
+export const galleryData = [
+  {
+    id: 1,
+    image: SertifikatOne
+  },
+  {
+    id: 2,
+    image: SertifikatTwo
+  },
+  {
+    id: 3,
+    image: SertifikatThree
+  },
+  {
+    id: 4,
+    image: SertifikatFour
   }
 ];

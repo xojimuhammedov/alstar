@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 function Main() {
   const { t } = useTranslation();
   return (
-    <Box p={'36px 0'}>
+    <Box p={'18px 0'}>
       <Box className="container-mix">
         <Heading {...css.title}>{t('download.name')}</Heading>
         <Text {...css.text}>{t('download.text')}</Text>

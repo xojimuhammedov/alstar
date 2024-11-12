@@ -4,6 +4,7 @@ import Head from 'next/head';
 import React from 'react';
 import Header from './_components/Header';
 import Main from './_components/Main';
+import Section from './_components/Section';
 
 function Service() {
   return (
@@ -25,6 +26,7 @@ function Service() {
       </header>
       <main>
         <Main />
+        <Section />
       </main>
       <footer>
         <Footer />
