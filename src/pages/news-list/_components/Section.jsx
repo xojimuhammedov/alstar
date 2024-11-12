@@ -2,68 +2,26 @@ import { Box, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AlstarPro from "../../../assets/alstarpro.jpg";
+import { newsData } from '@/api/data';
 
 function Section() {
+  const { t, i18n } = useTranslation();
   return (
     <Box p="24px 0">
       <Box className="container-mix">
-        <SimpleGrid columns={{ base:1, sm:2, lg:3 }} spacing="20px">
-          <Box {...css.box}>
-            <Image
-              height={'170px'}
-              objectFit={'cover'}
-              width={'100%'}
-              src={AlstarPro.src}
-              alt="News One Image"
-            />
-            <Box {...css.item}>
-              <Heading {...css.subtitle} size="h4">
-                ALSTAR 7 PRO
-              </Heading>
-              <Text {...css.text}>
-                Do`stlar, bugun bizning birinchi va o`z sohasida yagona ALSTAR 7 PRO onlayn
-                jurnalimiz nashr etildi!
-              </Text>
-              <Link href="/news/1">Learn More</Link>
+        <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing="20px">
+          {newsData.map((item, index) => (
+            <Box key={index} {...css.box}>
+              <Image {...css.image} src={item.image.src} alt="News One Image" />
+              <Box {...css.item}>
+                <Heading {...css.subtitle} size="h4">
+                  {item?.[`title_${i18n?.language}`]}
+                </Heading>
+                <Text {...css.text}>{item?.[`text_${i18n?.language}`]}</Text>
+                <Link href={`/news-about/${item?.id}`}>{t('Learn More')}</Link>
+              </Box>
             </Box>
-          </Box>
-          <Box {...css.box}>
-            <Image
-              src="https://alubond.com/wp-content/uploads/2022/11/inter.png"
-              alt="News One Image"
-              height={'170px'}
-              objectFit={'cover'}
-              width={'100%'}
-            />
-            <Box {...css.item}>
-              <Heading {...css.subtitle} size="h4">
-              ALSTAR в Самарканде!
-              </Heading>
-              <Text {...css.text}>
-              Уведомляем вас об открытии нашего оффициального шоурума в Самарканде, здесь вы можете ощутить качество и надежность наших АКП Адрес: г.Самарканд ул.Рудаки д.227.
-              </Text>
-              <Link href="/news/2">Learn More</Link>
-            </Box>
-          </Box>
-          <Box {...css.box}>
-            <Image
-              src="https://alubond.com/wp-content/uploads/2022/11/inter.png"
-              alt="News One Image"
-              height={'170px'}
-              objectFit={'cover'}
-              width={'100%'}
-            />
-            <Box {...css.item}>
-              <Heading {...css.subtitle} size="h4">
-              ALSTAR в шоурума.
-              </Heading>
-              <Text {...css.text}>
-              Уведомляем вас об открытии нашего оффициального шоурума в Самарканде, здесь вы можете ощутить качество и надежность наших АКП Адрес: г.Самарканд ул.Рудаки д.227.
-              </Text>
-              <Link href="/news/3">Learn More</Link>
-            </Box>
-          </Box>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>
@@ -117,5 +75,10 @@ const css = {
     fontSize: '18px',
     lineHeight: '26px',
     fontWeight: 400
+  },
+  image: {
+    height: '250px',
+    width: '100%',
+    objectFit: 'cover'
   }
 };
