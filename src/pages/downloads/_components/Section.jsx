@@ -10,7 +10,7 @@ import Share from 'yet-another-react-lightbox/plugins/share';
 function Section() {
   const [open, setOpen] = React.useState(false);
   const [imageId, setImageId] = React.useState(0);
-  const galleryAbout = galleryData.find((item) => item.id === Number(imageId));
+  const galleryAbout = galleryData.find((item) => item?.id === Number(imageId));
   return (
     <Box pb={'24px'}>
       <Box className="container-mix">
@@ -23,7 +23,7 @@ function Section() {
               }}
               {...css.image}
               key={index}
-              src={item.image.src}
+              src={item?.image?.src}
               alt="gallery"
             />
           ))}
@@ -36,7 +36,7 @@ function Section() {
         plugins={[Fullscreen, Share]}
         slides={[
           {
-            src: galleryAbout?.image.src
+            src: galleryAbout?.image?.src
           }
         ]}
       />
@@ -49,7 +49,10 @@ export default Section;
 const css = {
   image: {
     width: '100%',
-    height: '380px',
+    height: {
+      base: '100%',
+      md: '380px'
+    },
     objectFit: 'cover',
     cursor: 'pointer'
   }
